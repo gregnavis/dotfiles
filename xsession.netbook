@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export ENVIRONMENT=netbook
+
+fbpanel &
+openbox-session
