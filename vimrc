@@ -49,3 +49,7 @@ nmap <leader>wa :wall<CR>
 
 " tools
 nmap <leader>m :make<CR>
+
+if has('gui_running')
+    nmap <leader>x :silent :!xterm >& /dev/null &<CR>
+endif
