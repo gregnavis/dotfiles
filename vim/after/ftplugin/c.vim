@@ -4,4 +4,4 @@ setlocal softtabstop=8
 setlocal shiftwidth=8
 
 setlocal cindent
-setlocal cinoptions=":0l1g0"
+setlocal cinoptions=:0l1g0
