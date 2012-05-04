@@ -2,7 +2,7 @@ ENVIRONMENT?=default
 INSTALL?=$(HOME)
 RUBY?=ruby1.8
 
-.PHONY: all xsession vim vim-vundle
+.PHONY: all xsession vim vim-vundle inputrc
 
 all:
 	echo Please specify what to install.
@@ -22,3 +22,6 @@ vim-vundle:
 	vim +BundleInstall +qall
 	# build command-t
 	cd $(INSTALL)/.vim/bundle/command-t/ruby/command-t; $(RUBY) extconf.rb; make
+
+inputrc:
+	cp inputrc $(INSTALL)/.inputrc
