@@ -1,6 +1,10 @@
 " goodbye vi
 set nocompatible
 
+" use UTF-8 everywhere
+set encoding=utf8
+set fileencoding=utf8
+
 " required by vundle; will be turned on later
 filetype off
 
