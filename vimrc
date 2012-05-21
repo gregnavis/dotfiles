@@ -33,6 +33,9 @@ set number
 " use wildmenu
 set wildmenu
 
+" always show status line
+set laststatus=2
+
 " detect file types and run appriopriate scripts
 filetype on
 filetype plugin on
