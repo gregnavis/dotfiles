@@ -15,6 +15,9 @@ source ~/.vim/bundles.vim
 " required by vundle; vundle is now configured
 filetype plugin indent on
 
+" don't unload abandoned buffers
+set hidden
+
 " abbreviate messages; don't show the intro message
 set shortmess=aI
 
@@ -26,6 +29,9 @@ set shiftwidth=4
 
 " show line numbers
 set number
+
+" use wildmenu
+set wildmenu
 
 " detect file types and run appriopriate scripts
 filetype on
