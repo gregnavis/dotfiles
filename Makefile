@@ -5,7 +5,7 @@ RUBY?=ruby1.8
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
 
-.PHONY: all xsession vim vim-vundle inputrc
+.PHONY: all xsession vim vim-vundle inputrc gitignore
 
 all:
 	echo Please specify what to install.
@@ -32,3 +32,6 @@ $(VIM_VUNDLE_DIR):
 
 inputrc:
 	cp inputrc $(INSTALL)/.inputrc
+
+gitignore:
+	cp gitignore $(INSTALL)/.gitignore
