@@ -19,3 +19,5 @@ alias cd='pushcd'
 alias b='popd > /dev/null'
 
 PS1='\u@\H \w \D{%Y.%m.%d %H:%M:%S}\n\$ '
+
+[ -d "$HOME/.rvm/bin" ] && PATH="$HOME/.rvm/bin:$PATH"
