@@ -1,0 +1,9 @@
+[user]
+	name = Grzegorz Niewisiewicz
+	email = grzegorz@niewisiewicz.pl
+[color]
+    ui = auto
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	pager = less -+-RN -n
