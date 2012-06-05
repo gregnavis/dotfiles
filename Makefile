@@ -5,7 +5,7 @@ RUBY?=ruby1.8
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
 
-.PHONY: all xsession vim vim-vundle inputrc gitignore
+.PHONY: all xsession vim vim-vundle inputrc gitignore Xresources
 
 all:
 	echo Please specify what to install.
@@ -35,3 +35,8 @@ inputrc:
 
 gitignore:
 	cp gitignore $(INSTALL)/.gitignore
+
+Xresources:
+	cp Xresources $(INSTALL)/.Xresources
+	cp Xresources.solarized-dark $(INSTALL)/.Xresources.solarized-dark
+	cp Xresources.solarized-light $(INSTALL)/.Xresources.solarized-light
