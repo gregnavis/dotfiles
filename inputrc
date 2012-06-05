@@ -10,5 +10,5 @@
 "\C-gP": "git push "
 "\C-gr": "git reset "
 "\C-gR": "git rebase "
-"\C-gs": "git status -s "
+"\C-gs": "git status -sb "
 "\C-gS": "git show "
