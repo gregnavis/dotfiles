@@ -60,8 +60,8 @@ nmap <leader>n :NERDTree<CR>
 nmap <leader>ww :write<CR>
 nmap <leader>wa :wall<CR>
 
-" tools
-nmap <leader>m :make<CR>
+" make
+nmap <leader>m :make<SPACE>
 
 if has('gui_running')
     nmap <leader>x :silent :!xterm >& /dev/null &<CR>
