@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for bindir in `find $HOME/local -type d -name bin`; do
+for bindir in `find $HOME/local -type d -name bin | grep -v '/lib/'`; do
     PATH="$bindir:$PATH"
 done
 
