@@ -5,10 +5,11 @@ RUBY?=ruby1.8
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
 
-.PHONY: all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap
+.PHONY: default all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap
 
-all:
-	echo Please specify what to install.
+default:
+
+all: xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap
 
 xsession: 
 	cp xsession.$(ENVIRONMENT) ~/.xsession
