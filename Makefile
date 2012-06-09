@@ -5,7 +5,7 @@ RUBY?=ruby1.8
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
 
-.PHONY: all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig
+.PHONY: all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap
 
 all:
 	echo Please specify what to install.
@@ -47,3 +47,6 @@ bash:
 
 gitconfig:
 	cp gitconfig $(INSTALL)/.gitconfig
+
+xmodmap:
+	cp xmodmap $(INSTALL)/.xmodmap
