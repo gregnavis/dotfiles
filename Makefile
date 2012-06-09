@@ -5,7 +5,7 @@ RUBY?=ruby1.8
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
 
-.PHONY: default all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap
+.PHONY: default all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap xmonad
 
 default:
 
@@ -29,7 +29,7 @@ vim-vundle: | $(VIM_VUNDLE_DIR)
 	cd $(INSTALL)/.vim/bundle/command-t/ruby/command-t; $(RUBY) extconf.rb; make
 
 $(VIM_VUNDLE_DIR):
-	mkdir $(VIM_VUNDLE_DIR)
+	-mkdir $(VIM_VUNDLE_DIR)
 
 inputrc:
 	cp inputrc $(INSTALL)/.inputrc
@@ -51,3 +51,7 @@ gitconfig:
 
 xmodmap:
 	cp xmodmap $(INSTALL)/.xmodmap
+
+xmonad:
+	-mkdir $(INSTALL)/.xmonad
+	cp xmonad/xmonad.hs $(INSTALL)/.xmonad/xmonad.hs
