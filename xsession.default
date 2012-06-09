@@ -1,3 +1,17 @@
 #/bin/sh
 
+WALLPAPER=~/.wallpaper
+XMODMAP=~/.xmodmap
 export ENVIRONMENT=default
+
+# start pomodoro
+~/local/gtkbreak/bin/gtkbreak 1500 300 1500 300 1500 300 1500 1800 &
+
+# set the background
+[ -r $WALLPAPER ] && hsetroot -full $WALLPAPER
+
+# remap keys
+[ -r $XMODMAP ] && xmodmap $XMODMAP
+
+# go!
+xmonad
