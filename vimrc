@@ -52,6 +52,9 @@ endif
 " chdir automatically when navigating the NERDTree
 let g:NERDTreeChDirMode=2
 
+" show NERDTree bookmarks
+let g:NERDTreeShowBookmarks=1
+
 " keyboard mappings
 
 let mapleader = ","
