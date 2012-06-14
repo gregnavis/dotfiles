@@ -13,5 +13,9 @@ export ENVIRONMENT=default
 # remap keys
 [ -r $XMODMAP ] && xmodmap $XMODMAP
 
+# enable latchlock and sticky keys
+xkbset exp 60 =sticky =twokey =latchlock
+xkbset sticky -twokey latchlock
+
 # go!
 xmonad
