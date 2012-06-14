@@ -49,6 +49,9 @@ else
     colorscheme default
 endif
 
+" chdir automatically when navigating the NERDTree
+let g:NERDTreeChDirMode=2
+
 " keyboard mappings
 
 let mapleader = ","
