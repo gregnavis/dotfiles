@@ -56,12 +56,11 @@ let g:NERDTreeChDirMode=2
 
 let mapleader = ","
 
+" map ; to : in normal mode
+nnoremap ; :
+
 " NERDtree
 nmap <leader>n :NERDTree<CR>
-
-" writing
-nmap <leader>ww :write<CR>
-nmap <leader>wa :wall<CR>
 
 " make
 nmap <leader>m :make<SPACE>
