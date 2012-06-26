@@ -55,8 +55,7 @@ let g:NERDTreeChDirMode=2
 " show NERDTree bookmarks
 let g:NERDTreeShowBookmarks=1
 
-" keyboard mappings
-
+" set a leader
 let mapleader = ","
 
 " map ; to : in normal mode
@@ -65,9 +64,16 @@ nnoremap ; :
 " NERDtree
 nmap <leader>n :NERDTree<CR>
 
+" CtrlP mappings
+nmap <leader>t :CtrlP<CR>
+nmap <leader>b :CtrlPBuffer<CR>
+
 " make
 nmap <leader>m :make<SPACE>
 
+" shell
 if has('gui_running')
     nmap <leader>x :silent :!xterm >& /dev/null &<CR>
+else
+    nmap <leader>x :shell<CR>
 endif
