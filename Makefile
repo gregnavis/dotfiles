@@ -25,8 +25,6 @@ $(VIM_DIR):
 vim-vundle: | $(VIM_VUNDLE_DIR)
 	git clone https://github.com/gmarik/vundle.git $(INSTALL)/.vim/bundle/vundle
 	vim +BundleInstall +qall
-	# build command-t
-	cd $(INSTALL)/.vim/bundle/command-t/ruby/command-t; $(RUBY) extconf.rb; make
 
 $(VIM_VUNDLE_DIR):
 	-mkdir $(VIM_VUNDLE_DIR)
