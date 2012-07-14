@@ -4,9 +4,6 @@ WALLPAPER=~/.wallpaper
 XMODMAP=~/.xmodmap
 export ENVIRONMENT=default
 
-# start pomodoro
-~/local/gtkbreak/bin/gtkbreak 1500 300 1500 300 1500 300 1500 1800 &
-
 # set the background
 [ -r $WALLPAPER ] && hsetroot -full $WALLPAPER
 
@@ -16,6 +13,9 @@ export ENVIRONMENT=default
 # enable latchlock and sticky keys
 xkbset exp 60 =sticky =twokey =latchlock
 xkbset sticky -twokey latchlock
+
+# start Dropbox
+dropbox start
 
 # go!
 xmonad
