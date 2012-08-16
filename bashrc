@@ -13,7 +13,8 @@ function pushcd {
 }
 
 alias ls='ls --color=auto'
-alias l='ls -la'
+alias l='ls -l'
+alias la='ls -la'
 alias grep='grep --color=auto'
 alias cd='pushcd'
 alias b='popd > /dev/null'
