@@ -64,6 +64,9 @@ nnoremap ; :
 " NERDtree
 nmap <leader>n :NERDTree<CR>
 
+" CtrlP shows files relative to the current working directory
+let g:ctrlp_working_path_mode=0
+
 " CtrlP mappings
 nmap <leader>t :CtrlP<CR>
 nmap <leader>b :CtrlPBuffer<CR>
