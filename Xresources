@@ -1,14 +1,8 @@
 ! we need to reset it in order to set the colors
 *customization:
 
-! use terminus, 14 points
-#define FIXED_FONT -*-terminus-medium-r-*-*-14-*-*-*-*-*-iso10646-1
-
-*VT100.font: FIXED_FONT
-*VT100.boldFont: FIXED_FONT
-
 ! required to make Alt+<key> work correctly
 *VT100.eightBitInput: false
 
-! set colors
-#include ".Xresources.colors"
+! include custom setup
+#include ".Xresources.d/current"

@@ -36,6 +36,9 @@ set wildmenu
 " always show status line
 set laststatus=2
 
+" don't beep!
+set visualbell
+
 " detect file types and run appriopriate scripts
 filetype on
 filetype plugin on
@@ -44,7 +47,7 @@ filetype plugin on
 syntax on
 
 if has('gui_running')
-    colorscheme solarized
+    colorscheme Tomorrow-Night-Bright
 else
     colorscheme default
 endif
@@ -67,6 +70,12 @@ nmap <leader>n :NERDTree<CR>
 " CtrlP shows files relative to the current working directory
 let g:ctrlp_working_path_mode=0
 
+" Ignore cruft
+let g:ctrlp_custom_ignore = {
+\   'dir': '\.git$\|\.hg$\|\.svn$',
+\   'file': '\.exe$\|\.so$\|\.dll\|\.pyc',
+\}
+
 " CtrlP mappings
 nmap <leader>t :CtrlP<CR>
 nmap <leader>b :CtrlPBuffer<CR>
@@ -80,3 +89,6 @@ if has('gui_running')
 else
     nmap <leader>x :shell<CR>
 endif
+
+" set the hostname
+let g:hostname = substitute(system('hostname'), '\n\|\r', '', '')

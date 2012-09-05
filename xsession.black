@@ -2,7 +2,6 @@
 
 WALLPAPER=~/.wallpaper
 XMODMAP=~/.xmodmap
-export ENVIRONMENT=default
 
 # set the background
 [ -r $WALLPAPER ] && hsetroot -full $WALLPAPER

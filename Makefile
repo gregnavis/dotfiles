@@ -1,6 +1,5 @@
-ENVIRONMENT?=default
+HOSTNAME?=`hostname`
 INSTALL?=$(HOME)
-RUBY?=ruby1.8
 
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
@@ -12,7 +11,7 @@ default:
 all: xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap
 
 xsession: 
-	cp xsession.$(ENVIRONMENT) ~/.xsession
+	cp xsession.$(HOSTNAME) ~/.xsession
 
 vim: | $(VIM_DIR)
 	cp -r vim/* $(VIM_DIR)
@@ -36,9 +35,10 @@ gitignore:
 	cp gitignore $(INSTALL)/.gitignore
 
 Xresources:
+	-mkdir $(INSTALL)/.Xresources.d
+	cp -r Xresources.d/* $(INSTALL)/.Xresources.d
 	cp Xresources $(INSTALL)/.Xresources
-	cp Xresources.solarized-dark $(INSTALL)/.Xresources.solarized-dark
-	cp Xresources.solarized-light $(INSTALL)/.Xresources.solarized-light
+	ln -s $(INSTALL)/.Xresources.d/$(HOSTNAME) $(INSTALL)/.Xresources.d/current
 
 bash:
 	cp bashrc $(INSTALL)/.bashrc
