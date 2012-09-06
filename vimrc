@@ -73,11 +73,12 @@ nmap <leader>n :NERDTree<CR>
 " CtrlP shows files relative to the current working directory
 let g:ctrlp_working_path_mode=0
 
-" Ignore cruft
+" Ignore cruft intr CtrlP and NERDTree
 let g:ctrlp_custom_ignore = {
 \   'dir': '\.git$\|\.hg$\|\.svn$',
 \   'file': '\.exe$\|\.so$\|\.dll\|\.pyc\|\.o',
 \}
+let NERDTreeIgnore = ['\.exe$', '\.so$', '\.dll$', '\.pyc$', '\.o$']
 
 " CtrlP mappings
 nmap <leader>t :CtrlP<CR>
