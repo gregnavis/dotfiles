@@ -30,6 +30,9 @@ set shiftwidth=4
 " show line numbers
 set number
 
+" don't wrap long lines
+set nowrap
+
 " use wildmenu
 set wildmenu
 
