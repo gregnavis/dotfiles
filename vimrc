@@ -76,7 +76,7 @@ let g:ctrlp_working_path_mode=0
 " Ignore cruft
 let g:ctrlp_custom_ignore = {
 \   'dir': '\.git$\|\.hg$\|\.svn$',
-\   'file': '\.exe$\|\.so$\|\.dll\|\.pyc',
+\   'file': '\.exe$\|\.so$\|\.dll\|\.pyc\|\.o',
 \}
 
 " CtrlP mappings
