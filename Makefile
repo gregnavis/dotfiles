@@ -38,7 +38,7 @@ Xresources:
 	-mkdir $(INSTALL)/.Xresources.d
 	cp -r Xresources.d/* $(INSTALL)/.Xresources.d
 	cp Xresources $(INSTALL)/.Xresources
-	ln -s $(INSTALL)/.Xresources.d/$(HOSTNAME) $(INSTALL)/.Xresources.d/current
+	ln -f -s $(INSTALL)/.Xresources.d/$(HOSTNAME) $(INSTALL)/.Xresources.d/current
 
 bash:
 	cp bashrc $(INSTALL)/.bashrc

@@ -1,8 +1,8 @@
 " fonts to use in different environments
 let s:fonts = {
-\   "black": "DejaVu Sans Mono 22",
-\   "white": "DejaVu Sans Mono 12",
-\   "redsky": "DejaVu Sans Mono 22"
+\   "black": "Inconsolata Medium 22",
+\   "white": "Inconsolata Medium 12",
+\   "redsky": "Inconsolata Medium 22"
 \}
 
 " use console instead of popups and set an icon

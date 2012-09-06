@@ -1,2 +1,2 @@
-#include "./fonts/DejaVu-Sans-Mono-22"
+#include "./fonts/Inconsolata-22"
 #include "./colors/Tomorrow-Night-Bright"
