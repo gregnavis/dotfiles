@@ -19,4 +19,10 @@ alias grep='grep --color=auto'
 alias cd='pushcd'
 alias b='popd > /dev/null'
 
-PS1='\u@\H \w \D{%Y.%m.%d %H:%M:%S}\n\$ '
+function user_and_host() {
+    if [ -n "$SSH_CONNECTION" ]; then
+        echo "\\u@\\H "
+    fi
+}
+
+PS1="$(user_and_host)\\D{%H:%M:%S} \\w\\n\\$ "
