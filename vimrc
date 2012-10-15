@@ -64,8 +64,9 @@ let g:NERDTreeShowBookmarks=1
 " set a leader
 let mapleader = ","
 
-" map ; to : in normal mode
+" map ; to : in normal and visual mode
 nnoremap ; :
+vnoremap ; :
 
 " NERDtree
 nmap <leader>n :NERDTree<CR>
