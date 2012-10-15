@@ -80,10 +80,6 @@ let g:ctrlp_custom_ignore = {
 \}
 let NERDTreeIgnore = ['\.exe$', '\.so$', '\.dll$', '\.pyc$', '\.o$']
 
-" CtrlP mappings
-nmap <leader>t :CtrlP<CR>
-nmap <leader>b :CtrlPBuffer<CR>
-
 " make
 nmap <leader>m :make<SPACE>
 
