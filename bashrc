@@ -20,7 +20,7 @@ alias cd='pushcd'
 alias b='popd > /dev/null'
 
 function user_and_host() {
-    if [ -n "$SSH_CONNECTION" ]; then
+    if [ -n "$SSH_CONNECTION" -o "$USER" == "root" ]; then
         echo "\\u@\\H "
     fi
 }
