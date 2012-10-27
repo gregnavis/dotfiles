@@ -12,3 +12,13 @@
 "\C-gR": "git rebase "
 "\C-gs": "git status -sb "
 "\C-gS": "git show "
+
+"\C-ha": "hg add "
+"\C-hc": "hg commit "
+"\C-hd": "hg diff "
+"\C-hl": "hg log "
+"\C-hm": "hg merge "
+"\C-hp": "hg pull "
+"\C-hP": "hg push "
+"\C-hr": "hg remove "
+"\C-hs": "hg status "
