@@ -28,6 +28,10 @@ set softtabstop=4
 set shiftwidth=4
 set smarttab
 
+" be smart about case when searching; search incrementally
+set smartcase
+set incsearch
+
 " show line numbers
 set number
 
