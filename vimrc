@@ -86,6 +86,9 @@ let g:ctrlp_custom_ignore = {
 \}
 let NERDTreeIgnore = ['\.exe$', '\.so$', '\.dll$', '\.pyc$', '\.o$']
 
+" Ack mappings
+nmap <leader>a :Ack<SPACE>
+
 " make
 nmap <leader>m :make<SPACE>
 
