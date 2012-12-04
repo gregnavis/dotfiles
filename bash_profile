@@ -6,8 +6,12 @@ if [ -d $HOME/local ]; then
 	done
 fi
 
-export PATH
-
 if [ -r /etc/bash_completion ]; then
     . /etc/bash_completion
+fi
+
+if [ -d "$HOME/.rbenv" ]; then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    export PATH
+    eval "$(rbenv init -)"
 fi
