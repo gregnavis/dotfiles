@@ -96,6 +96,12 @@ nmap <leader>b :CtrlPBuffer<CR>
 " make
 nmap <leader>m :make<SPACE>
 
+" Syntastic mappings
+nmap <leader>s :SyntasticCheck<CR>
+
+" Syntastic syntax checkers
+let g:syntastic_python_checker = 'pylint'
+
 " shell
 if has('gui_running')
     nmap <leader>x :silent :!xterm >& /dev/null &<CR>
