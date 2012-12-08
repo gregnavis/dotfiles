@@ -90,7 +90,7 @@ let NERDTreeIgnore = ['\.exe$', '\.so$', '\.dll$', '\.pyc$', '\.o$']
 nmap <leader>a :Ack<SPACE>
 
 " CtrlP mappings
-nmap <leader>t :CtrlP<CR>
+let g:ctrlp_map = '<leader>t'
 nmap <leader>b :CtrlPBuffer<CR>
 
 " make
