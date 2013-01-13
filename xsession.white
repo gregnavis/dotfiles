@@ -13,8 +13,17 @@ XMODMAP=~/.xmodmap
 xkbset exp 60 =sticky =twokey =latchlock
 xkbset sticky -twokey latchlock
 
-# start Dropbox
-dropbox start
+# start Dropbox (if installed)
+if command -v dropbox
+then
+    dropbox start
+fi
+
+# start xflux (if installed)
+if command -v xflux
+then
+    xflux -l 53 -g -14
+fi
 
 # go!
 xmonad
