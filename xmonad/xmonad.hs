@@ -1,19 +1,27 @@
-import XMonad
-import XMonad.Util.EZConfig(additionalKeys)
-import XMonad.Hooks.ManageHelpers
+import System.IO
+
 import Graphics.X11.ExtraTypes.XF86
 
-myModMask = mod4Mask
-myBorderWidth = 2
-myBrowser = "google-chrome"
-myTerm = "xterm"
-myVim = "gvim"
+import XMonad
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.EZConfig(additionalKeys)
 
 main = do
+    xmobar <- spawnPipe "xmobar"
     xmonad $ defaultConfig
         {
-            modMask = myModMask,
-            borderWidth = myBorderWidth
+            manageHook = manageDocks <+> manageHook defaultConfig,
+            layoutHook = avoidStruts $ layoutHook defaultConfig,
+            logHook = dynamicLogWithPP xmobarPP
+                {
+                    ppOutput = hPutStrLn xmobar,
+                    ppTitle = xmobarColor "green" "" . shorten 50
+                },
+            borderWidth = 1,
+            terminal = "urxvtc",
+            modMask = mod4Mask
         }
         `additionalKeys`
         [
@@ -21,7 +29,8 @@ main = do
             ((0, xF86XK_AudioLowerVolume), spawn "amixer -q set PCM 5%-"),
             ((0, xF86XK_AudioRaiseVolume), spawn "amixer -q set PCM 5%+"),
             ((0, xF86XK_AudioPlay), spawn "mocp -G"),
-            ((0, xF86XK_HomePage), spawn myBrowser),
-            ((myModMask, xK_x), spawn myTerm),
-            ((myModMask, xK_g), spawn myVim)
+            ((0, xF86XK_HomePage), spawn "google-chrome"),
+            ((mod4Mask, xK_g), spawn "gvim"),
+            ((mod4Mask, xK_l), spawn "slock"),
+            ((mod4Mask, xK_Print), spawn "scrot")
         ]

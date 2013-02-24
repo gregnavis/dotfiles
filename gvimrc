@@ -1,6 +1,6 @@
 " fonts to use in different environments
 let s:fonts = {
-\   "black": "Inconsolata Medium 22",
+\   "black": "Inconsolata Medium 15",
 \   "white": "Inconsolata Medium 12",
 \   "redsky": "Inconsolata Medium 22"
 \}

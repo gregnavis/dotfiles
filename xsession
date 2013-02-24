@@ -25,5 +25,8 @@ then
     xflux -l 53 -g -14
 fi
 
+# start the rxvt daemon
+urxvtd
+
 # go!
 xmonad

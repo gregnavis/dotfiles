@@ -104,7 +104,7 @@ let g:syntastic_python_checker = 'pylint'
 
 " shell
 if has('gui_running')
-    nmap <leader>x :silent :!xterm >& /dev/null &<CR>
+    nmap <leader>x :silent :!urxvtc >& /dev/null &<CR>
 else
     nmap <leader>x :shell<CR>
 endif

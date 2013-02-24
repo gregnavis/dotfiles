@@ -4,14 +4,14 @@ INSTALL?=$(HOME)
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
 
-.PHONY: default all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap xmonad hg
+.PHONY: default all xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobarrc xmodmap xmonad hg
 
 default:
 
-all: xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmodmap
+.PHONY: xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobarrc xmodmap xmonad hg
 
 xsession: 
-	cp xsession.$(HOSTNAME) ~/.xsession
+	cp xsession ~/.xsession
 
 vim: | $(VIM_DIR)
 	cp -r vim/* $(VIM_DIR)
@@ -46,6 +46,9 @@ bash:
 
 gitconfig:
 	cp gitconfig $(INSTALL)/.gitconfig
+
+xmobarrc:
+	cp xmobarrc $(INSTALL)/.xmobarrc
 
 xmodmap:
 	cp xmodmap $(INSTALL)/.xmodmap

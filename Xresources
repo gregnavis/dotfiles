@@ -1,8 +1,44 @@
 ! we need to reset it in order to set the colors
 *customization:
 
-! required to make Alt+<key> work correctly
+! include configuration values
+#include ".Xresources.d/current"
+
+! xterm
+
+!! make Alt+<key> work properly
 *VT100.eightBitInput: false
 
-! include custom setup
-#include ".Xresources.d/current"
+!! the font
+*VT100.faceName: FACE_NAME
+*VT100.faceSize: FACE_SIZE
+
+! rxvt
+
+!! 32-bit color depth
+Rxvt.depth: 32
+
+!! the font
+Rxvt.font: xft:FACE_NAME:pixelsize=FACE_SIZE
+
+!! fade the text when focus is lost
+Rxvt.fading: 25
+
+!! no scrollbar
+Rxvt.scrollBar: false
+
+!! make the window 30% transparent
+Rxvt.transparent: true
+Rxvt.shading: 30
+
+!! make console "screenshots" in the home directory
+Rxvt.print-pipe: cat > $(mktemp --tmpdir="$HOME" console.XXX)
+
+!! set the terminal to support colors
+Rxvt.termName: xterm-256color
+
+!! don not display the pointer when typing
+Rxvt.pointerBlank: true
+
+!! use Google Chrome as a web browser
+Rxvt.urlLauncher: google-chrome
