@@ -34,9 +34,6 @@ Rxvt.shading: 30
 !! make console "screenshots" in the home directory
 Rxvt.print-pipe: cat > $(mktemp --tmpdir="$HOME" console.XXX)
 
-!! set the terminal to support colors
-Rxvt.termName: xterm-256color
-
 !! don not display the pointer when typing
 Rxvt.pointerBlank: true
 
