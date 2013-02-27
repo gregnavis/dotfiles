@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 WALLPAPER=~/.wallpaper
 XMODMAP=~/.xmodmap
@@ -13,6 +13,9 @@ XMODMAP=~/.xmodmap
 xkbset exp 60 =sticky =twokey =latchlock
 xkbset sticky -twokey latchlock
 
+# don't annoy me!
+xset -b
+
 # start Dropbox (if installed)
 if command -v dropbox
 then
@@ -26,7 +29,7 @@ then
 fi
 
 # start the rxvt daemon
-urxvtd
+urxvtd &
 
 # go!
 xmonad
