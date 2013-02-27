@@ -1,0 +1,15 @@
+#!/bin/bash
+
+add_path() {
+    if [ -d "$1" ]; then
+        PATH="$1:$PATH"
+    fi
+}
+
+add_path "/opt/google/chrome"
+add_path "$HOME/opt/firefox"
+add_path "$HOME/opt/go/bin"
+add_path "$HOME/opt/node/bin"
+add_path "$HOME/opt/python/bin"
+
+export PATH

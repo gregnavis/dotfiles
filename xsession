@@ -3,6 +3,11 @@
 WALLPAPER=~/.wallpaper
 XMODMAP=~/.xmodmap
 
+# set environment variables
+if [ -r "$HOME/.env" ]; then
+    . $HOME/.env
+fi
+
 # set the background
 [ -r $WALLPAPER ] && hsetroot -full $WALLPAPER
 
