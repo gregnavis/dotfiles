@@ -4,11 +4,11 @@ INSTALL?=$(HOME)
 VIM_DIR=$(INSTALL)/.vim
 VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
 
-.PHONY: default ackrc env xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobarrc xmodmap xmonad hg
+.PHONY: default ackrc env xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobar xmodmap xmonad hg
 
 default:
 
-.PHONY: xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobarrc xmodmap xmonad hg
+.PHONY: xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobar xmodmap xmonad hg
 
 env:
 	cp env $(INSTALL)/.env
@@ -53,7 +53,7 @@ bash: env
 gitconfig:
 	cp gitconfig $(INSTALL)/.gitconfig
 
-xmobarrc:
+xmobar:
 	cp xmobarrc $(INSTALL)/.xmobarrc
 
 xmodmap:
