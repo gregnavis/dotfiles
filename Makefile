@@ -1,68 +1,83 @@
-HOSTNAME?=`hostname`
-INSTALL?=$(HOME)
+HOSTNAME ?= $(shell hostname)
+INSTALL ?= $(HOME)
 
-VIM_DIR=$(INSTALL)/.vim
-VIM_VUNDLE_DIR=$(VIM_DIR)/bundle
+VIM_DIR = $(INSTALL)/.vim
+VIM_BUNDLE_DIR = $(VIM_DIR)/bundle
+VIM_VUNDLE_DIR = $(VIM_BUNDLE_DIR)/vundle
 
-.PHONY: default ackrc env xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobar xmodmap xmonad hg
-
+.PHONY: default
 default:
 
-.PHONY: xsession vim vim-vundle inputrc gitignore Xresources bash gitconfig xmobar xmodmap xmonad hg
+.PHONY: show-config
+show-config:
+	@echo "HOSTNAME=$(HOSTNAME)"
+	@echo "INSTALL=$(INSTALL)"
+	@echo "VIM_DIR=$(VIM_DIR)"
+	@echo "VIM_BUNDLE_DIR=$(VIM_BUNDLE_DIR)"
+	@echo "VIM_VUNDLE_DIR=$(VIM_VUNDLE_DIR)"
 
-env:
-	cp env $(INSTALL)/.env
-
+.PHONY: ackrc
 ackrc:
 	cp ackrc $(INSTALL)/.ackrc
 
-xsession: env
-	cp xsession $(INSTALL)/.xsession
+.PHONY: bash
+bash: env
+	cp bashrc $(INSTALL)/.bashrc
+	cp bash_profile $(INSTALL)/.bash_profile
 
-vim: | $(VIM_DIR)
-	cp -r vim/* $(VIM_DIR)
-	cp vimrc $(INSTALL)/.vimrc
-	cp gvimrc $(INSTALL)/.gvimrc
+.PHONY: env
+env:
+	cp env $(INSTALL)/.env
 
-$(VIM_DIR):
-	mkdir $(VIM_DIR)
+.PHONY: git
+git: gitconfig gitignore
 
-vim-vundle: | $(VIM_VUNDLE_DIR)
-	git clone https://github.com/gmarik/vundle.git $(INSTALL)/.vim/bundle/vundle
-	vim +BundleInstall +qall
+.PHONY: gitconfig
+gitconfig:
+	cp gitconfig $(INSTALL)/.gitconfig
 
-$(VIM_VUNDLE_DIR):
-	-mkdir $(VIM_VUNDLE_DIR)
-
-inputrc:
-	cp inputrc $(INSTALL)/.inputrc
-
+.PHONY: gitignore
 gitignore:
 	cp gitignore $(INSTALL)/.gitignore
 
+.PHONY: hg
+hg:
+	cp hgrc $(INSTALL)/.hgrc
+	cp hgignore $(INSTALL)/.hgignore
+
+.PHONY: inputrc
+inputrc:
+	cp inputrc $(INSTALL)/.inputrc
+
+.PHONY: vim
+vim:
+	-mkdir $(INSTALL)/.vim
+	cp -r vim/* $(VIM_DIR)
+	cp vimrc $(INSTALL)/.vimrc
+	cp gvimrc $(INSTALL)/.gvimrc
+	[ -e $(VIM_VUNDLE_DIR) ] || git clone https://github.com/gmarik/vundle.git $(VIM_VUNDLE_DIR)
+	vim +BundleInstall +qall
+
+.PHONY: xmobar
+xmobar:
+	cp xmobarrc $(INSTALL)/.xmobarrc
+
+.PHONY: xmodmap
+xmodmap:
+	cp xmodmap $(INSTALL)/.xmodmap
+
+.PHONY: xmonad
+xmonad:
+	-mkdir $(INSTALL)/.xmonad
+	cp xmonad/xmonad.hs $(INSTALL)/.xmonad/xmonad.hs
+
+.PHONY: Xresources
 Xresources:
 	-mkdir $(INSTALL)/.Xresources.d
 	cp -r Xresources.d/* $(INSTALL)/.Xresources.d
 	cp Xresources $(INSTALL)/.Xresources
 	ln -f -s $(INSTALL)/.Xresources.d/$(HOSTNAME) $(INSTALL)/.Xresources.d/current
 
-bash: env
-	cp bashrc $(INSTALL)/.bashrc
-	cp bash_profile $(INSTALL)/.bash_profile
-
-gitconfig:
-	cp gitconfig $(INSTALL)/.gitconfig
-
-xmobar:
-	cp xmobarrc $(INSTALL)/.xmobarrc
-
-xmodmap:
-	cp xmodmap $(INSTALL)/.xmodmap
-
-xmonad:
-	-mkdir $(INSTALL)/.xmonad
-	cp xmonad/xmonad.hs $(INSTALL)/.xmonad/xmonad.hs
-
-hg:
-	cp hgrc $(INSTALL)/.hgrc
-	cp hgignore $(INSTALL)/.hgignore
+.PHONY: xsession
+xsession: env
+	cp xsession $(INSTALL)/.xsession
