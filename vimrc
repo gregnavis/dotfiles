@@ -81,10 +81,19 @@ let g:ctrlp_working_path_mode=0
 
 " Ignore cruft intr CtrlP and NERDTree
 let g:ctrlp_custom_ignore = {
-\   'dir': '\.git$\|\.hg$\|\.svn$',
+\   'dir': '\.git$\|\.hg$\|\.svn\|\bin\|lib\|man$',
 \   'file': '\.exe$\|\.so$\|\.dll\|\.pyc\|\.o',
 \}
-let NERDTreeIgnore = ['\.exe$', '\.so$', '\.dll$', '\.pyc$', '\.o$']
+let NERDTreeIgnore = [
+\   '\.exe$',
+\   '\.so$',
+\   '\.dll$',
+\   '\.pyc$',
+\   '\.o$',
+\   'bin[[dir]]',
+\   'lib[[dir]]',
+\   'man[[dir]]'
+\]
 
 " Ack mappings
 nmap <leader>a :Ack<SPACE>
