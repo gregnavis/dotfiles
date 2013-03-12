@@ -55,7 +55,7 @@ filetype plugin on
 syntax on
 
 if has('gui_running')
-    colorscheme Tomorrow-Night-Bright
+    colorscheme Tomorrow
 else
     colorscheme default
 endif
