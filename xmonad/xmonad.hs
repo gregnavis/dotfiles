@@ -21,7 +21,8 @@ main = do
                 },
             borderWidth = 1,
             terminal = "urxvtc",
-            modMask = mod4Mask
+            modMask = mod4Mask,
+            focusFollowsMouse = False
         }
         `additionalKeys`
         [
