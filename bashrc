@@ -25,4 +25,4 @@ function user_and_host() {
     fi
 }
 
-PS1="$(user_and_host)\\D{%H:%M:%S} \\w\\n\\$ "
+PS1="\[\033[4;30m\]$(user_and_host)\\D{%H:%M:%S} \\w\\n\[\033[0m\]\\$ "
