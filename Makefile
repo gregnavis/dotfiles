@@ -16,8 +16,8 @@ show-config:
 	@echo "VIM_BUNDLE_DIR=$(VIM_BUNDLE_DIR)"
 	@echo "VIM_VUNDLE_DIR=$(VIM_VUNDLE_DIR)"
 
-.PHONY: ackrc
-ackrc:
+.PHONY: ack
+ack:
 	cp ackrc $(INSTALL)/.ackrc
 
 .PHONY: bash
