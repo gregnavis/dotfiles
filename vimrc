@@ -81,8 +81,8 @@ let g:ctrlp_working_path_mode=0
 
 " Ignore cruft intr CtrlP and NERDTree
 let g:ctrlp_custom_ignore = {
-\   'dir': '\.git$\|\.hg$\|\.svn\|\bin\|lib\|man$',
-\   'file': '\.exe$\|\.so$\|\.dll\|\.pyc\|\.o',
+\   'dir': '\v[\/](\.git|\.hg|\.svn|bin|lib|man)$',
+\   'file': '\v\.(exe|so|dll|pyc|o)$',
 \}
 let NERDTreeIgnore = [
 \   '\.exe$',
@@ -92,7 +92,8 @@ let NERDTreeIgnore = [
 \   '\.o$',
 \   'bin[[dir]]',
 \   'lib[[dir]]',
-\   'man[[dir]]'
+\   'man[[dir]]',
+\   'share[[dir]]'
 \]
 
 " Ack mappings
