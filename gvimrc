@@ -2,7 +2,7 @@
 let s:fonts = {
 \   "black": "Inconsolata Medium 15",
 \   "white": "Inconsolata Medium 13",
-\   "redsky": "Inconsolata Medium 13"
+\   "redsky": "Inconsolata Medium 14"
 \}
 
 " use console instead of popups and set an icon
