@@ -32,6 +32,6 @@ main = do
             ((0, xF86XK_AudioPlay), spawn "mocp -G"),
             ((0, xF86XK_HomePage), spawn "firefox"),
             ((mod4Mask, xK_g), spawn "gvim"),
-            ((mod4Mask, xK_l), spawn "slock"),
+            ((mod4Mask, xK_s), spawn "slock"),
             ((mod4Mask, xK_Print), spawn "scrot")
         ]
