@@ -90,7 +90,8 @@ nmap <leader>a :Ack<SPACE>
 nmap <leader>m :make<SPACE>
 
 " Syntastic
-let g:syntastic_python_checker = 'pylint'
+let g:syntastic_python_checkers = ['pep8', 'pylint']
+let g:syntastic_auto_loc_list=1
 
 " Shell
 if has('gui_running')
