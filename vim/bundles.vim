@@ -1,5 +1,4 @@
 Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
