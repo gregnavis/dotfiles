@@ -1,89 +1,65 @@
-" goodbye vi
+" Welcome in Vim!
 set nocompatible
 
-" use UTF-8 everywhere
+" Encoding
 set encoding=utf8
 set fileencoding=utf8
 
-" required by vundle; will be turned on later
+" Vundle
 filetype off
-
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 source ~/.vim/bundles.vim
-
-" required by vundle; vundle is now configured
 filetype plugin indent on
 
-" don't unload abandoned buffers
-set hidden
-
-" abbreviate messages; don't show the intro message
-set shortmess=aI
-
-" don't insert tabs; indent using 4 spaces
+" Indentation
 set expandtab
-set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
+set tabstop=4
 
-" be smart about case when searching; search incrementally
-set smartcase
+" Searching
 set incsearch
+set smartcase
 
-" show line numbers
+" Viewing
+set nowrap
 set number
 
-" don't wrap long lines
-set nowrap
-
-" use wildmenu
+" Wild menu
 set wildmenu
 
-" always show status line
+" Status line
+"" always show the status line
 set laststatus=2
 
-" don't beep!
+" Miscellaneous
+set hidden
+set shortmess=aI
 set visualbell
 
 " detect file types and run appriopriate scripts
 filetype on
 filetype plugin on
 
-" highlight syntax (solarized in GUI, default in terminal)
+" Syntax highlight
 syntax on
-
 if has('gui_running')
     colorscheme Tomorrow
 else
     colorscheme default
 endif
 
-" chdir automatically when navigating the NERDTree
-let g:NERDTreeChDirMode=2
-
-" show NERDTree bookmarks
-let g:NERDTreeShowBookmarks=1
-
-" set a leader
+" Mappings
 let mapleader = ","
-
-" map ; to : in normal and visual mode
+"" switch : and ; in the normal and visual mode
 nnoremap ; :
 vnoremap ; :
 
-" NERDtree
-nmap <leader>n :NERDTree<CR>
-
-" CtrlP shows files relative to the current working directory
-let g:ctrlp_working_path_mode=0
-
-" Ignore cruft intr CtrlP and NERDTree
-let g:ctrlp_custom_ignore = {
-\   'dir': '\v[\/](\.git|\.hg|\.svn|bin|lib|man)$',
-\   'file': '\v\.(exe|so|dll|pyc|o)$',
-\}
+" NERDTree
+let g:NERDTreeChDirMode=2
+let g:NERDTreeShowBookmarks=1
 let NERDTreeIgnore = [
 \   '\.exe$',
 \   '\.so$',
@@ -95,29 +71,33 @@ let NERDTreeIgnore = [
 \   'man[[dir]]',
 \   'share[[dir]]'
 \]
+nmap <leader>n :NERDTree<CR>
 
-" Ack mappings
-nmap <leader>a :Ack<SPACE>
-
-" CtrlP mappings
+" CtrlP
+"" show files relative to the cwd
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_custom_ignore = {
+\   'dir': '\v[\/](\.git|\.hg|\.svn|bin|lib|man)$',
+\   'file': '\v\.(exe|so|dll|pyc|o)$',
+\}
 let g:ctrlp_map = '<leader>t'
 nmap <leader>b :CtrlPBuffer<CR>
+
+" ACK
+nmap <leader>a :Ack<SPACE>
 
 " make
 nmap <leader>m :make<SPACE>
 
-" Syntastic mappings
-nmap <leader>s :SyntasticCheck<CR>
-
-" Syntastic syntax checkers
+" Syntastic
 let g:syntastic_python_checker = 'pylint'
 
-" shell
+" Shell
 if has('gui_running')
     nmap <leader>x :silent :!urxvtc >& /dev/null &<CR>
 else
     nmap <leader>x :shell<CR>
 endif
 
-" set the hostname
+" Hostname
 let g:hostname = substitute(system('hostname'), '\n\|\r', '', '')
