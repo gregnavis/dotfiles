@@ -71,7 +71,7 @@ let NERDTreeIgnore = [
 \   'man[[dir]]',
 \   'share[[dir]]'
 \]
-nmap <leader>n :NERDTree<CR>
+nnoremap <leader>n :NERDTree<CR>
 
 " CtrlP
 "" show files relative to the cwd
@@ -81,13 +81,13 @@ let g:ctrlp_custom_ignore = {
 \   'file': '\v\.(exe|so|dll|pyc|o)$',
 \}
 let g:ctrlp_map = '<leader>t'
-nmap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " ACK
-nmap <leader>a :Ack<SPACE>
+nnoremap <leader>a :Ack<SPACE>
 
 " make
-nmap <leader>m :make<SPACE>
+nnoremap <leader>m :make<SPACE>
 
 " Syntastic
 let g:syntastic_python_checkers = ['pep8', 'pylint']
@@ -97,9 +97,9 @@ nnoremap <leader>s :SyntasticCheck<CR>
 
 " Shell
 if has('gui_running')
-    nmap <leader>x :silent :!urxvtc >& /dev/null &<CR>
+    nnoremap <leader>x :silent :!urxvtc >& /dev/null &<CR>
 else
-    nmap <leader>x :shell<CR>
+    nnoremap <leader>x :shell<CR>
 endif
 
 " Hostname
