@@ -91,7 +91,9 @@ nmap <leader>m :make<SPACE>
 
 " Syntastic
 let g:syntastic_python_checkers = ['pep8', 'pylint']
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
+
+nnoremap <leader>s :SyntasticCheck<CR>
 
 " Shell
 if has('gui_running')
