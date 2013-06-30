@@ -13,3 +13,5 @@ add_path "$HOME/opt/node/bin"
 add_path "$HOME/opt/python/bin"
 
 export PATH
+export DEBEMAIL="grzegorz@niewisiewicz.pl"
+export DEBFULLNAME="Grzegorz Niewisiewicz"
