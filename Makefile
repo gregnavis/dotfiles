@@ -45,6 +45,11 @@ hg:
 	cp hgrc $(INSTALL)/.hgrc
 	cp hgignore $(INSTALL)/.hgignore
 
+.PHONY: i3
+i3:
+	-mkdir $(INSTALL)/.i3
+	cp i3/config $(INSTALL)/.i3/config
+
 .PHONY: inputrc
 inputrc:
 	cp inputrc $(INSTALL)/.inputrc
