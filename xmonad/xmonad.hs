@@ -31,7 +31,8 @@ main = do
             ((0, xF86XK_AudioRaiseVolume), spawn "amixer -q set PCM 5%+"),
             ((0, xF86XK_AudioPlay), spawn "mocp -G"),
             ((0, xF86XK_HomePage), spawn "firefox"),
+            ((0, xF86XK_Mail), spawn "icedove"),
             ((mod4Mask, xK_g), spawn "gvim"),
-            ((mod4Mask, xK_s), spawn "slock"),
+            ((mod4Mask .|. shiftMask, xK_s), spawn "slock"),
             ((mod4Mask, xK_Print), spawn "scrot")
         ]
