@@ -50,6 +50,10 @@ i3:
 	-mkdir $(INSTALL)/.i3
 	cp i3/config $(INSTALL)/.i3/config
 
+.PHONY: i3status
+i3status:
+	cp i3status.conf $(INSTALL)/.i3status.conf
+
 .PHONY: inputrc
 inputrc:
 	cp inputrc $(INSTALL)/.inputrc
