@@ -37,4 +37,4 @@ fi
 urxvtd &
 
 # go!
-xmonad
+i3
