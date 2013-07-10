@@ -15,8 +15,8 @@
 
 ! rxvt
 
-!! 32-bit color depth
-Rxvt.depth: 32
+!! 24-bit color depth
+Rxvt.depth: 24
 
 !! the font
 Rxvt.font: xft:FACE_NAME:pixelsize=FACE_SIZE
