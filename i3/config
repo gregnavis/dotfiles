@@ -13,6 +13,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvtc
 
+# start gvim
+bindsym $mod+g exec gvim
+
 # lock the screen
 bindsym $mod+Shift+s exec slock
 
