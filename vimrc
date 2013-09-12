@@ -88,6 +88,11 @@ nnoremap <leader>m :make<SPACE>
 " Syntastic
 let g:syntastic_python_checkers = ['pep8', 'pylint']
 let g:syntastic_auto_loc_list=0
+let g:syntastic_mode_map = {
+\   'mode': 'passive',
+\   'active_filetypes': [],
+\   'passive_filetypes': []
+\}
 
 nnoremap <leader>s :SyntasticCheck<CR>
 
