@@ -65,11 +65,7 @@ let NERDTreeIgnore = [
 \   '\.so$',
 \   '\.dll$',
 \   '\.pyc$',
-\   '\.o$',
-\   'bin[[dir]]',
-\   'lib[[dir]]',
-\   'man[[dir]]',
-\   'share[[dir]]'
+\   '\.o$'
 \]
 nnoremap <leader>n :NERDTree<CR>
 
