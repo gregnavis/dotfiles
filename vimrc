@@ -46,7 +46,7 @@ filetype plugin on
 " Syntax highlight
 syntax on
 if has('gui_running')
-    colorscheme Tomorrow
+    colorscheme fruity
 else
     colorscheme default
 endif
