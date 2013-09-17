@@ -58,6 +58,11 @@ i3status:
 inputrc:
 	cp inputrc $(INSTALL)/.inputrc
 
+.PHONY: pip
+pip:
+	-mkdir $(INSTALL)/.pip
+	cp -r pip/* $(INSTALL)/.pip
+
 .PHONY: vim
 vim:
 	-mkdir $(INSTALL)/.vim
