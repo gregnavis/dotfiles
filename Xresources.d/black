@@ -1,4 +1,0 @@
-#include "./colors/Tomorrow"
-
-#define FACE_NAME Inconsolata
-#define FACE_SIZE 18

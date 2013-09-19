@@ -29,6 +29,10 @@ bash: env
 env:
 	cp env $(INSTALL)/.env
 
+.PHONY: fonts.conf
+fonts.conf:
+	cp fonts.conf $(INSTALL)/.fonts.conf
+
 .PHONY: git
 git: gitconfig gitignore
 
@@ -90,7 +94,6 @@ Xresources:
 	-mkdir $(INSTALL)/.Xresources.d
 	cp -r Xresources.d/* $(INSTALL)/.Xresources.d
 	cp Xresources $(INSTALL)/.Xresources
-	ln -f -s $(INSTALL)/.Xresources.d/$(HOSTNAME) $(INSTALL)/.Xresources.d/current
 
 .PHONY: xsession
 xsession: env

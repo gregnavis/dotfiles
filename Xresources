@@ -1,8 +1,8 @@
 ! we need to reset it in order to set the colors
 *customization:
 
-! include configuration values
-#include ".Xresources.d/current"
+! the color scheme
+#include ".Xresources.d/colors/Tomorrow-Night-Bright"
 
 ! xterm
 
@@ -10,8 +10,8 @@
 *VT100.eightBitInput: false
 
 !! the font
-*VT100.faceName: FACE_NAME
-*VT100.faceSize: FACE_SIZE
+*VT100.faceName: Inconsolata
+*VT100.faceSize: 13
 
 ! rxvt
 
@@ -19,7 +19,7 @@
 Rxvt.depth: 24
 
 !! the font
-Rxvt.font: xft:FACE_NAME:pixelsize=FACE_SIZE
+Rxvt.font: xft:Inconsolata-13
 
 !! fade the text when focus is lost
 Rxvt.fading: 25
@@ -27,9 +27,8 @@ Rxvt.fading: 25
 !! no scrollbar
 Rxvt.scrollBar: false
 
-!! make the window 30% transparent
-Rxvt.transparent: true
-Rxvt.shading: 30
+!! no transparency
+Rxvt.transparent: false
 
 !! make console "screenshots" in the home directory
 Rxvt.print-pipe: cat > $(mktemp --tmpdir="$HOME" console.XXX)
