@@ -22,6 +22,8 @@ set tabstop=4
 " Searching
 set incsearch
 set smartcase
+set hlsearch
+set nowrapscan
 
 " Viewing
 set nowrap
