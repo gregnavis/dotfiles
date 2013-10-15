@@ -111,7 +111,7 @@ mode "resize" {
 # don't annoy me!
 focus_follows_mouse no
 
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -129,11 +129,13 @@ for_window [title="^Call with "] floating enable
 assign [class="Firefox"] 2
 assign [class="Gajim"] 3
 assign [class="Skype"] 3
+assign [class="HipChat"] 3
 assign [class="Hamster-time-tracker"] 5
 
 # start the tools of the trade
 exec gvim
 exec gajim
 exec skype
+exec hipchat
 exec firefox
 exec hamster-time-tracker
