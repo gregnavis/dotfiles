@@ -104,6 +104,3 @@ if has('gui_running')
 else
     nnoremap <leader>x :shell<CR>
 endif
-
-" Hostname
-let g:hostname = substitute(system('hostname'), '\n\|\r', '', '')
