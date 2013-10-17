@@ -36,6 +36,9 @@ set wildmenu
 "" always show the status line
 set laststatus=2
 
+" Don't annoy me with swap files
+set directory=$HOME/.vim/swapfiles
+
 " Miscellaneous
 set hidden
 set shortmess=aI
