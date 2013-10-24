@@ -44,6 +44,9 @@ set hidden
 set shortmess=aI
 set visualbell
 
+" The command window
+set cmdheight=2
+
 " detect file types and run appriopriate scripts
 filetype on
 filetype plugin on
@@ -58,9 +61,22 @@ endif
 
 " Mappings
 let mapleader = ","
+
+"" make j and k use logical lines
+nnoremap j gj
+nnoremap k gk
+
+"" spelling
+nnoremap <silent> <leader>ss :setlocal spell!<CR>
+nnoremap <silent> <leader>se :setlocal spelllang=en<CR>
+nnoremap <silent> <leader>sp :setlocal spelllang=pl<CR>
+
 "" switch : and ; in the normal and visual mode
 nnoremap ; :
 vnoremap ; :
+
+"" <leader>/ toggles search highlight
+nnoremap <silent> <leader>/ :set hlsearch!<CR>
 
 " NERDTree
 let g:NERDTreeChDirMode=2
@@ -99,7 +115,7 @@ let g:syntastic_mode_map = {
 \   'passive_filetypes': []
 \}
 
-nnoremap <leader>s :SyntasticCheck<CR>
+nnoremap <leader>l :SyntasticCheck<CR>
 
 " Shell
 if has('gui_running')
