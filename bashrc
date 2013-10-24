@@ -20,28 +20,35 @@ alias cd='pushcd'
 alias b='popd > /dev/null'
 
 function __prompt_command() {
+    local red="\[$(tput setaf 1)\]"
+    local green="\[$(tput setaf 2)\]"
+    local yellow="\[$(tput setaf 5)\]"
+    local bold="\[$(tput bold)\]"
+    local blink="\[$(tput blink)\]"
+    local reset="\[$(tput sgr0)\]"
+
     local exit_code=`printf '%+3s' $?`
 
     if [ $exit_code -eq 0 ]; then
-        local exit_code_format="\\033[1;32m\]"
+        local exit_code_format="${green}"
     else
-        local exit_code_format="\\033[1;5;31m\]"
+        local exit_code_format="${bold}${green}"
     fi
-    PS1="\\033[0m\][${exit_code_format}${exit_code}\[\033[0m\]] "
-    PS1+="\\D{%H:%M:%S} \\033[1m\]\\w\\033[0m\]\\n"
+    PS1="[${exit_code_format}${exit_code}${reset}] "
+    PS1+="\\D{%H:%M:%S} ${bold}\\w${reset}\\n"
 
     if [ "$USER" == "root" ]; then
-        PS1+="\\033[1;31m\]"
+        PS1+="${red}"
         local show_host=yes
     elif [ -n "$SSH_CONNECTION" ]; then
-        PS1+="\\033[1;35m\]"
+        PS1+="${yellow}"
         local show_host=yes
     fi
 
     if [ "$show_host" == "yes" ]; then
         PS1+="\\u@\\H"
     fi
-    PS1+="\\$ \\033[0m\]"
+    PS1+="\\$ ${reset}"
 }
 
 export PROMPT_COMMAND=__prompt_command
