@@ -22,6 +22,8 @@ ack:
 
 .PHONY: bash
 bash: env
+	-mkdir $(INSTALL)/.bash
+	cp dependencies/fabric-completion/fabric-completion.bash $(INSTALL)/.bash
 	cp bashrc $(INSTALL)/.bashrc
 	cp bash_profile $(INSTALL)/.bash_profile
 
