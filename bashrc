@@ -20,6 +20,8 @@ alias cd='pushcd'
 alias b='popd > /dev/null'
 
 function __prompt_command() {
+    local exit_code=`printf '%+3s' $?`
+
     local red="\[$(tput setaf 1)\]"
     local green="\[$(tput setaf 2)\]"
     local yellow="\[$(tput setaf 5)\]"
@@ -27,12 +29,10 @@ function __prompt_command() {
     local blink="\[$(tput blink)\]"
     local reset="\[$(tput sgr0)\]"
 
-    local exit_code=`printf '%+3s' $?`
-
     if [ $exit_code -eq 0 ]; then
         local exit_code_format="${green}"
     else
-        local exit_code_format="${bold}${green}"
+        local exit_code_format="${bold}${blink}${red}"
     fi
     PS1="[${exit_code_format}${exit_code}${reset}] "
     PS1+="\\D{%H:%M:%S} ${bold}\\w${reset}\\n"
