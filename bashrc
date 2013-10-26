@@ -34,8 +34,15 @@ function __prompt_command() {
     else
         local exit_code_format="${bold}${blink}${red}"
     fi
+
     PS1="[${exit_code_format}${exit_code}${reset}] "
-    PS1+="\\D{%H:%M:%S} ${bold}\\w${reset}\\n"
+    PS1+="\\D{%H:%M:%S} "
+
+    if [ -n "$VIRTUAL_ENV" ]; then
+        PS1+="${VIRTUAL_ENV#${WORKON_HOME}/} "
+    fi
+
+    PS1+="${bold}\\w${reset}\\n"
 
     if [ "$USER" == "root" ]; then
         PS1+="${red}"
