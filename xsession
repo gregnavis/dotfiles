@@ -9,7 +9,7 @@ if [ -r "$HOME/.env" ]; then
 fi
 
 # set the background
-[ -r $WALLPAPER ] && hsetroot -full $WALLPAPER
+[ -r $WALLPAPER ] && hsetroot -center $WALLPAPER
 
 # remap keys
 [ -r $XMODMAP ] && xmodmap $XMODMAP
