@@ -101,7 +101,7 @@ let g:ctrlp_map = '<leader>t'
 nnoremap <leader>b :CtrlPBuffer<CR>
 
 " ACK
-nnoremap <leader>a :Ack<SPACE>
+nnoremap <leader>a :Ack!<SPACE>
 
 " make
 nnoremap <leader>m :make<SPACE>
