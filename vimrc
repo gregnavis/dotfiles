@@ -117,6 +117,9 @@ let g:syntastic_mode_map = {
 
 nnoremap <leader>l :SyntasticCheck<CR>
 
+" Tags
+nnoremap <leader>j :tag<SPACE>
+
 " Shell
 if has('gui_running')
     nnoremap <leader>x :silent :!urxvtc >& /dev/null &<CR>
