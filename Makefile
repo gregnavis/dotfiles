@@ -27,6 +27,10 @@ bash: env
 	cp bashrc $(INSTALL)/.bashrc
 	cp bash_profile $(INSTALL)/.bash_profile
 
+.PHONY: ctags
+ctags:
+	cp ctags $(INSTALL)/.ctags
+
 .PHONY: env
 env:
 	cp env $(INSTALL)/.env
