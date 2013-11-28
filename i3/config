@@ -12,10 +12,17 @@ bindsym $mod+p exec dmenu_run
 
 bindsym XF86Calculator exec galculator
 
-bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%-
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+
+# headphones control
+bindsym XF86AudioMute exec --no-startup-id amixer -q set Headphone toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Headphone 5%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Headphone 5%+
 
+# speakers control
+bindsym Mod1+XF86AudioMute exec --no-startup-id amixer -q set Front toggle
+bindsym Mod1+XF86AudioLowerVolume exec --no-startup-id amixer -q set Front 5%-
+bindsym Mod1+XF86AudioRaiseVolume exec --no-startup-id amixer -q set Front 5%+
+
+# microphone control
 bindsym Shift+XF86AudioMute exec --no-startup-id amixer -q set 'Front Mic' toggle
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -q set 'Front Mic' 5%-
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer -q set 'Front Mic' 5%+
@@ -136,6 +143,5 @@ assign [class="Hamster-time-tracker"] 5
 exec gvim
 exec gajim
 exec skype
-exec hipchat
 exec firefox
 exec hamster-time-tracker
