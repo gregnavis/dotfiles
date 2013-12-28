@@ -45,7 +45,7 @@ set shortmess=aI
 set visualbell
 
 " The command window
-set cmdheight=2
+set cmdheight=1
 
 " detect file types and run appriopriate scripts
 filetype on
@@ -54,7 +54,7 @@ filetype plugin on
 " Syntax highlight
 syntax on
 if has('gui_running')
-    colorscheme fruity
+    colorscheme base16-default
 else
     colorscheme default
 endif
@@ -70,6 +70,17 @@ nnoremap k gk
 nnoremap <silent> <leader>ss :setlocal spell!<CR>
 nnoremap <silent> <leader>se :setlocal spelllang=en<CR>
 nnoremap <silent> <leader>sp :setlocal spelllang=pl<CR>
+
+"" toggling background color
+function! ToggleBackground()
+    if &background == "light"
+        set background=dark
+    else
+        set background=light
+    endif
+endfunction
+
+nnoremap <silent> <leader>cb :call ToggleBackground()<CR>
 
 "" switch : and ; in the normal and visual mode
 nnoremap ; :
@@ -97,14 +108,15 @@ let g:ctrlp_custom_ignore = {
 \   'dir': '\v[\/](\.git|\.hg|\.svn|bin|lib|man)$',
 \   'file': '\v\.(exe|so|dll|pyc|o)$',
 \}
-let g:ctrlp_map = '<leader>t'
-nnoremap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_map = '<leader>p'
+nnoremap <leader>P :CtrlPBuffer<CR>
 
 " ACK
 nnoremap <leader>a :Ack!<SPACE>
 
 " make
 nnoremap <leader>m :make<SPACE>
+nnoremap <leader>M :make<CR>
 
 " Syntastic
 let g:syntastic_python_checkers = ['pep8', 'pylint']
@@ -122,7 +134,7 @@ nnoremap <leader>j :tag<SPACE>
 
 " Shell
 if has('gui_running')
-    nnoremap <leader>x :silent :!urxvtc >& /dev/null &<CR>
+    nnoremap <leader>x :silent :!x-terminal-emulator >& /dev/null &<CR>
 else
     nnoremap <leader>x :shell<CR>
 endif
