@@ -114,12 +114,15 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_map = '<leader>p'
 nnoremap <leader>P :CtrlPBuffer<CR>
 
-" ACK
+" Ag
 nnoremap <leader>a :Ag<SPACE>
 
 " make
 nnoremap <leader>m :make<SPACE>
 nnoremap <leader>M :make<CR>
+
+" QuickRun
+nnoremap <silent> <leader>q :QuickRun<CR>
 
 " Syntastic
 let g:syntastic_python_checkers = ['pep8', 'pylint']
