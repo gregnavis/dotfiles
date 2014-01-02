@@ -1,7 +1,7 @@
 # i3 config file (v4)
 
 set $mod Mod4
-font pango:Terminus 12px
+font pango:Inconsolata 14
 floating_modifier $mod
 
 # Starting programs.
@@ -9,6 +9,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+Shift+Return exec gvim
 bindsym $mod+Shift+s exec slock
 bindsym $mod+p exec dmenu_run
+bindsym XF86HomePage exec x-www-browser
 
 bindsym XF86Calculator exec galculator
 
@@ -118,12 +119,16 @@ mode "resize" {
 # don't annoy me!
 focus_follows_mouse no
 
+# Make borders wide enough to be visible.
+new_window pixel 4
+
 workspace_auto_back_and_forth no
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
     status_command i3status
+    font pango:Inconsolata 16
     position top
 }
 
@@ -143,5 +148,5 @@ assign [class="Hamster-time-tracker"] 5
 exec gvim
 exec gajim
 exec skype
-exec firefox
+exec x-www-browser
 exec hamster-time-tracker
