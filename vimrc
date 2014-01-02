@@ -47,6 +47,9 @@ set visualbell
 " The command window
 set cmdheight=1
 
+" Highlight important columns
+set colorcolumn=81,121
+
 " detect file types and run appriopriate scripts
 filetype on
 filetype plugin on
@@ -130,7 +133,7 @@ let g:syntastic_mode_map = {
 nnoremap <leader>l :SyntasticCheck<CR>
 
 " Tags
-nnoremap <leader>j :tag<SPACE>
+nnoremap <leader>t :tag<SPACE>
 
 " Shell
 if has('gui_running')
