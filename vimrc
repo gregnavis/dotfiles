@@ -89,6 +89,16 @@ nnoremap <silent> <leader>cb :call ToggleBackground()<CR>
 nnoremap ; :
 vnoremap ; :
 
+"" make window navigation easier
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-l> <C-w>l
+
+"" Fugitive mappings
+nnoremap <C-g>s :Gstatus<CR>
+nnoremap <C-g>d :Gdiff<CR>
+
 "" <leader>/ toggles search highlight
 nnoremap <silent> <leader>/ :set hlsearch!<CR>
 
