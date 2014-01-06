@@ -61,3 +61,4 @@ function __prompt_command() {
 export PROMPT_COMMAND=__prompt_command
 
 source "$HOME/.bash/fabric-completion.bash"
+eval "$(pip completion --bash)"
