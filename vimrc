@@ -95,6 +95,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
 nnoremap <C-l> <C-w>l
 
+"" make opening and closing windows easier
+nnoremap <C-n> :new<CR>
+nnoremap <C-c> :close<CR>
+
 "" Fugitive mappings
 nnoremap <C-g>s :Gstatus<CR>
 nnoremap <C-g>d :Gdiff<CR>
