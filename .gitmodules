@@ -4,3 +4,6 @@
 [submodule "dependencies/fabric-completion"]
 	path = dependencies/fabric-completion
 	url = git@github.com:underself/fabric-completion
+[submodule "dependencies/base16-xresources"]
+	path = dependencies/base16-xresources
+	url = https://github.com/chriskempson/base16-xresources

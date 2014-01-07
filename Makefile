@@ -99,6 +99,7 @@ xmonad:
 Xresources:
 	-mkdir $(INSTALL)/.Xresources.d
 	cp -r Xresources.d/* $(INSTALL)/.Xresources.d
+	cp -r dependencies/base16-xresources/*.xresources $(INSTALL)/.Xresources.d/colors
 	cp Xresources $(INSTALL)/.Xresources
 
 .PHONY: xsession

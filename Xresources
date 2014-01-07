@@ -2,7 +2,7 @@
 *customization:
 
 ! the color scheme
-#include ".Xresources.d/colors/Tomorrow-Night-Bright"
+#include ".Xresources.d/colors/base16-default.light.xresources"
 
 ! xterm
 
