@@ -1,7 +1,7 @@
 # i3 config file (v4)
 
 set $mod Mod4
-font pango:Inconsolata 14
+font pango:Inconsolata Medium 11
 floating_modifier $mod
 
 # Starting programs.
@@ -128,7 +128,7 @@ workspace_auto_back_and_forth no
 # finds out, if available)
 bar {
     status_command i3status
-    font pango:Inconsolata 16
+    font pango:Inconsolata Medium 11
     position top
 }
 
@@ -136,6 +136,7 @@ bar {
 for_window [class="Galculator"] floating enable
 for_window [class="Hamster-time-tracker"] floating enable
 for_window [title="^Call with "] floating enable
+for_window [title="xsane"] floating enable
 
 # let there be order!
 assign [class="Firefox"] 2
