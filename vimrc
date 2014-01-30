@@ -27,14 +27,14 @@ set nowrapscan
 
 " Viewing
 set nowrap
-set number
+set nonumber
 
 " Wild menu
 set wildmenu
 
 " Status line
-"" always show the status line
-set laststatus=2
+"" show the status line with more than one window
+set laststatus=1
 
 " Don't annoy me with swap files
 set directory=$HOME/.vim/swapfiles
