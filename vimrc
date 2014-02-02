@@ -110,7 +110,7 @@ nnoremap <leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 "" split windows in a smart way
 function! SplitBrain()
-    if winwidth(0) > 4 * winheight(0)
+    if 2 * winwidth(0) > 5 * winheight(0)
         execute 'vertical new +setfiletype\ ' . &filetype
     else
         execute 'new +setfiletype\ ' . &filetype
@@ -118,6 +118,9 @@ function! SplitBrain()
 endfunction
 
 nnoremap <C-n> :call SplitBrain()<CR>
+
+"" switch to the other buffer
+nnoremap <C-s> <C-^>
 
 "" Fugitive mappings
 nnoremap <C-g>s :Gstatus<CR>
