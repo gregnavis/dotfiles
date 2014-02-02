@@ -58,7 +58,10 @@ function __prompt_command() {
     PS1+="\\$ ${reset}"
 }
 
-export PROMPT_COMMAND=__prompt_command
+PROMPT_COMMAND=__prompt_command
+HISTCONTRL=ignorespace:erasedups
+HISTFILESIZE=7500
+HISTSIZE=5000
 
 source "$HOME/.bash/fabric-completion.bash"
 eval "$(pip completion --bash)"
