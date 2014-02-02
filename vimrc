@@ -40,15 +40,15 @@ set laststatus=1
 set directory=$HOME/.vim/swapfiles
 
 " Miscellaneous
-set hidden
+set nohidden
 set shortmess=aI
 set visualbell
 
 " The command window
 set cmdheight=1
 
-" Highlight important columns
-set colorcolumn=81,121
+" Don't highlight anything
+set colorcolumn=
 
 " detect file types and run appriopriate scripts
 filetype on
@@ -96,9 +96,19 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-l> <C-w>l
 
 "" make opening and closing windows easier
-nnoremap <C-n>h :new<CR>
-nnoremap <C-n>v :vertical new<CR>
 nnoremap <C-c> :close<CR>
+nnoremap <C-o> <C-w>o
+
+"" split windows in a smart way
+function! SplitBrain()
+    if winwidth(0) > 4 * winheight(0)
+        execute 'vertical new +setfiletype\ ' . &filetype
+    else
+        execute 'new +setfiletype\ ' . &filetype
+    endif
+endfunction
+
+nnoremap <C-n> :call SplitBrain()<CR>
 
 "" Fugitive mappings
 nnoremap <C-g>s :Gstatus<CR>
