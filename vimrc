@@ -105,6 +105,9 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-c> :close<CR>
 nnoremap <C-o> <C-w>o
 
+"" replacing
+nnoremap <leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
 "" split windows in a smart way
 function! SplitBrain()
     if winwidth(0) > 4 * winheight(0)
