@@ -69,10 +69,16 @@ let mapleader = ","
 nnoremap j gj
 nnoremap k gk
 
+" Configuration
+
+"" reload
+nnoremap <leader>cr :source ~/.vimrc<CR>
+"
 "" spelling
-nnoremap <silent> <leader>ss :setlocal spell!<CR>
-nnoremap <silent> <leader>se :setlocal spelllang=en<CR>
-nnoremap <silent> <leader>sp :setlocal spelllang=pl<CR>
+nnoremap <silent> <leader>cst :setlocal spell!<CR>
+nnoremap <silent> <leader>cse :setlocal spelllang=en<CR>
+nnoremap <silent> <leader>csp :setlocal spelllang=pl<CR>
+
 
 "" toggling background color
 function! ToggleBackground()
