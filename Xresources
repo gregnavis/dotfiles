@@ -36,5 +36,18 @@ Rxvt.print-pipe: cat > $(mktemp --tmpdir="$HOME" console.XXX)
 !! don not display the pointer when typing
 Rxvt.pointerBlank: true
 
-!! use Google Chrome as a web browser
-Rxvt.urlLauncher: google-chrome
+!! use a generic browser
+Rxvt.urlLauncher: x-www-browser
+
+!matchers
+
+Rxvt.perl-ext: default,matcher
+Rxvt.matcher.button: 1
+
+!! clickable Python tracebacks
+Rxvt.matcher.pattern.1: File\\ \\"(.*)\\",\\ line\\ (\\d+)
+Rxvt.matcher.launcher.1: gvim --remote-silent +$2 $1
+
+!! clickable Python back traces in pdb
+Rxvt.matcher.pattern.2: (.*)(\\d+)\\S*\\(\\)
+Rxvt.matcher.launcher.2: gvim --remote-silent +$2 $1
