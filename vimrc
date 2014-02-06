@@ -154,6 +154,9 @@ nnoremap <leader>P :CtrlPBuffer<CR>
 " Ag
 nnoremap <leader>a :Ag<SPACE>
 
+" UltiSnips
+let g:UltiSnipsSnippetDirectories = ['snippets']
+
 " make
 nnoremap <leader>m :make<SPACE>
 nnoremap <leader>M :make<CR>
