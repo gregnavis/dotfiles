@@ -1,0 +1,115 @@
+snippet task "a Fabric task" b
+@task
+def ${1:name}():
+    '''${2:docstring}'''
+    ${3:pass}
+endsnippet
+
+snippet if "an if clause" b
+if ${1:predicate}:
+    ${2:pass}
+endsnippet
+
+snippet ife "an if/else clause" b
+if ${1:predicate}:
+    ${2:pass}
+else:
+    ${3:pass}
+endsnippet
+
+snippet for "a for loop" b
+for ${1:item} in ${2:collection}:
+    ${3:pass}
+endsnippet
+
+snippet w "a while loop" b
+while ${1:predicate}:
+    ${2:pass}
+endsnippet
+
+snippet f "a function" b
+def ${1:name}(${2}):
+    ${3:pass}
+endsnippet
+
+snippet im "a method" b
+def ${1:name}(self${2}):
+    ${3:pass}
+endsnippet
+
+snippet sm "a static method" b
+@staticmethod
+def ${1:name}(${2}):
+    ${3:pass}
+endsnippet
+
+snippet cm "a class method" b
+@classmethod
+def ${1:name}(cls${2}):
+    ${3:pass}
+endsnippet
+
+snippet c "a class" b
+class ${1:Name}(${2:object}):
+    ${3:pass}
+endsnippet
+
+snippet testcase "a unittest test case" b
+class ${1:TestCaseName}TestCase(unittest.TestCase):
+    ${2:pass}
+endsnippet
+
+snippet test "a unittest method" b
+def test_${1:name}(self):
+    ${2:pass}
+endsnippet
+
+snippet exc "an exception" b
+class ${1:ErrorClassName}(${2:Exception}):
+    def __init__(self):
+         super($1, self).__init__()
+endsnippet
+
+snippet init "an __init__" b
+def __init__(self${1}):
+`!p
+snip >> 1
+if t[1].strip():
+    for name in t[1].split(',')[1:]:
+        snip.rv += snip.mkline('self._{0} = {0}\n'.format(name.strip()))`
+endsnippet
+
+snippet def= "a default argument value (pure Python)" b
+if ${1:argument_name} is None:
+    $1 = ${2:default_value}
+endsnippet
+
+snippet defh "a default argument value (with helper)" b
+${1:argument_name} = default($1, ${2:default_value})
+endsnippet
+
+snippet p "a property" b
+@property
+def ${1:name}(self):
+    ${2:pass}
+endsnippet
+
+snippet [ "a list comprehension" i
+[${1:expression} for ${2:item} in ${3:collection}
+endsnippet
+
+snippet ( "a generator" i
+(${1:expression} for ${2:item} in ${3:collection}
+endsnippet
+
+snippet { "a dict generator" i
+{${1:key}: ${2:value} for ${3:key, value} in ${4:collection}
+endsnippet
+
+snippet ae "assertEqual" b
+self.assertEqual(${1}, ${2})
+endsnippet
+
+snippet ar "assertRaises" 
+self.assertRaises(${1:exception}, ${2:callable_and_arguments})
+endsnippet
