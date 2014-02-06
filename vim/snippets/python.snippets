@@ -54,12 +54,12 @@ class ${1:Name}(${2:object}):
     ${3:pass}
 endsnippet
 
-snippet testcase "a unittest test case" b
-class ${1:TestCaseName}TestCase(unittest.TestCase):
-    ${2:pass}
+snippet tc "a test case class" b
+class ${1:TestCaseName}TestCase(${2:unittest.TestCase}):
+    ${3:pass}
 endsnippet
 
-snippet test "a unittest method" b
+snippet tm "a test method" b
 def test_${1:name}(self):
     ${2:pass}
 endsnippet
