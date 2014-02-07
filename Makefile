@@ -2,8 +2,6 @@ HOSTNAME ?= $(shell hostname)
 INSTALL ?= $(HOME)
 
 VIM_DIR = $(INSTALL)/.vim
-VIM_BUNDLE_DIR = $(VIM_DIR)/bundle
-VIM_VUNDLE_DIR = $(VIM_BUNDLE_DIR)/vundle
 
 .PHONY: default
 default:
@@ -13,8 +11,6 @@ show-config:
 	@echo "HOSTNAME=$(HOSTNAME)"
 	@echo "INSTALL=$(INSTALL)"
 	@echo "VIM_DIR=$(VIM_DIR)"
-	@echo "VIM_BUNDLE_DIR=$(VIM_BUNDLE_DIR)"
-	@echo "VIM_VUNDLE_DIR=$(VIM_VUNDLE_DIR)"
 
 .PHONY: ack
 ack:
@@ -75,12 +71,10 @@ pip:
 
 .PHONY: vim
 vim:
-	-mkdir $(INSTALL)/.vim
+	-mkdir $(VIM_DIR)
 	cp -r vim/* $(VIM_DIR)
 	cp vimrc $(INSTALL)/.vimrc
 	cp gvimrc $(INSTALL)/.gvimrc
-	[ -e $(VIM_VUNDLE_DIR) ] || git clone https://github.com/gmarik/vundle.git $(VIM_VUNDLE_DIR)
-	vim +BundleInstall +qall
 
 .PHONY: xmobar
 xmobar:
