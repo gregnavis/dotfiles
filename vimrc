@@ -71,7 +71,10 @@ nnoremap k gk
 
 "" reload
 nnoremap <leader>cr :source ~/.vimrc<CR>
-"
+
+"" toggling numbers
+nnoremap <leader>cn :setlocal number!<CR>
+
 "" spelling
 nnoremap <silent> <leader>cst :setlocal spell!<CR>
 nnoremap <silent> <leader>cse :setlocal spelllang=en<CR>
