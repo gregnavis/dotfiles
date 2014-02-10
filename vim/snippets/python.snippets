@@ -110,6 +110,14 @@ snippet ae "assertEqual" b
 self.assertEqual(${1}, ${2})
 endsnippet
 
-snippet ar "assertRaises" 
+snippet ar "assertRaises" b
 self.assertRaises(${1:exception}, ${2:callable_and_arguments})
+endsnippet
+
+snippet at "assertTrue" b
+self.assertTrue(${1:predicate})
+endsnippet
+
+snippet s "self."
+self.
 endsnippet
