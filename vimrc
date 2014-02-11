@@ -166,7 +166,7 @@ nnoremap <leader>M :make<CR>
 nnoremap <silent> <leader>q :QuickRun<CR>
 
 " Syntastic
-let g:syntastic_python_checkers = ['pep8', 'pylint']
+let g:syntastic_python_checkers = ['pylint', 'pep8']
 let g:syntastic_auto_loc_list=0
 let g:syntastic_mode_map = {
 \   'mode': 'passive',
