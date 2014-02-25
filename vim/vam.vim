@@ -40,7 +40,7 @@ fun! SetupVAM()
                             \'Syntastic',
                             \'ag',
                             \'jedi-vim',
-                            \'Sass',
+                            \'github:tpope/vim-haml',
                             \'github:itchyny/lightline.vim',
                             \'vim-sneak',
                             \'vim-autopep8',
@@ -48,8 +48,7 @@ fun! SetupVAM()
                             \'virtualenv',
                             \'Markdown_syntax',
                             \'endwise',
-                            \'commentary',
-                            \'hg:https://bitbucket.org/agr/ropevim'], {'auto_install' : 1})
+                            \'commentary'], {'auto_install' : 1})
 endfun
 call SetupVAM()
 au GUIEnter * call SetupVAM()
