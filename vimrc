@@ -173,6 +173,7 @@ let g:syntastic_mode_map = {
 \   'active_filetypes': [],
 \   'passive_filetypes': []
 \}
+let g:syntastic_python_pep8_args = '--max-line-length=80'
 
 nnoremap <leader>l :SyntasticCheck<CR>
 
