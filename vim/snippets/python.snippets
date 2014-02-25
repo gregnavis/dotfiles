@@ -110,6 +110,10 @@ snippet ae "assertEqual" b
 self.assertEqual(${1}, ${2})
 endsnippet
 
+snippet ane "assertNotEqual"
+self.assertNotEqual(${1}, ${2})
+endsnippet
+
 snippet ar "assertRaises" b
 self.assertRaises(${1:exception}, ${2:callable_and_arguments})
 endsnippet
@@ -118,11 +122,65 @@ snippet at "assertTrue" b
 self.assertTrue(${1:predicate})
 endsnippet
 
+snippet af "assertFalse" b
+self.assertFalse(${1:predicate})
+endsnippet
+
 snippet s "self."
 self.
 endsnippet
 
 snippet main "the main part of a script"
 if __name__ == '__main__':
+	${1:pass}
+endsnippet
+
+snippet doctest "a doctest main block"
+if __name__ == '__main__':
+	import doctest
+	doctest.testmod()
+endsnippet
+
+snippet eq "the __eq__ method"
+def __eq__(self, rhs):
+	${1:pass}
+endsnippet
+
+snippet ne "the __ne__ method"
+def __ne__(self, rhs):
+	${1:return not self == rhs}
+endsnippet
+
+snippet repr "the __repr__ method"
+def __repr__(self):
+	return ${1:self}
+endsnippet
+
+snippet str "the __str__ method"
+def __str__(self):
+	return ${1:self}
+endsnippet
+
+snippet rnie "raise the NotImplementedError exception"
+raise NotImplementedError()
+endsnippet
+
+snippet call "the __call__ method"
+def __call__(self${2}):
+    ${3:pass}
+endsnippet
+
+snippet enter "the __enter__ method"
+def __enter__(self):
+	${1:pass}
+endsnippet
+
+snippet exit "the __exit__ method"
+def __exit__(self, exc_type, exc_value, traceback):
+	${1:pass}
+endsnippet
+
+snippet iter "the __iter__ method"
+def __iter__(self):
 	${1:pass}
 endsnippet
