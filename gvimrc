@@ -2,4 +2,4 @@
 set guioptions=ci
 
 " set the font
-set guifont=Inconsolata\ Medium\ 16
+set guifont=Inconsolata\ Medium\ 14
