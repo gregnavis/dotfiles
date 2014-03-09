@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -r "$HOME/.env" ]; then
+    source "$HOME/.env"
+fi
