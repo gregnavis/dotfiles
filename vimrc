@@ -178,6 +178,12 @@ let g:syntastic_python_pep8_args = '--max-line-length=80'
 
 nnoremap <leader>l :SyntasticCheck<CR>
 
+" Emmet
+
+let g:user_emmet_expandabbr_key = '<C-e>'
+let g:user_emmet_next_key = '<C-j>'
+let g:user_emmet_prev_key = '<C-k>'
+
 " Tags
 nnoremap <leader>t :tag<SPACE>
 

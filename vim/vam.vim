@@ -47,7 +47,8 @@ fun! SetupVAM()
                             \'virtualenv',
                             \'Markdown_syntax',
                             \'endwise',
-                            \'commentary'], {'auto_install' : 1})
+                            \'commentary',
+                            \'Emmet'], {'auto_install' : 1})
 endfun
 call SetupVAM()
 au GUIEnter * call SetupVAM()
