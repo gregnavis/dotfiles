@@ -64,10 +64,19 @@ i3status:
 inputrc:
 	cp inputrc $(INSTALL)/.inputrc
 
+.PHONY: openbox
+openbox: env startx
+	-mkdir -p $(INSTALL)/.config/openbox
+	cp -r openbox/* $(INSTALL)/.config/openbox
+
 .PHONY: pip
 pip:
 	-mkdir $(INSTALL)/.pip
 	cp -r pip/* $(INSTALL)/.pip
+
+.PHONY: startx
+startx:
+	cp startx $(INSTALL)/.startx
 
 .PHONY: vim
 vim:
@@ -97,5 +106,5 @@ Xresources:
 	cp Xresources $(INSTALL)/.Xresources
 
 .PHONY: xsession
-xsession: env
+xsession: env startx
 	cp xsession $(INSTALL)/.xsession
