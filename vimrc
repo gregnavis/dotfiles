@@ -156,7 +156,8 @@ nnoremap <leader>P :CtrlPBuffer<CR>
 nnoremap <leader>a :Ag<SPACE>
 
 " UltiSnips
-let g:UltiSnipsSnippetDirectories = ['snippets']
+"" cannot use snippets because it's reserved for SnipMate snippets
+let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 
 " make
 nnoremap <leader>m :make<SPACE>
