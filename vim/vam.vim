@@ -20,9 +20,8 @@ fun! EnsureVamIsOnDisk(plugin_root_dir)
 endfun
 
 fun! SetupVAM()
-    let g:vim_addon_manager = {'scms': {'hg': {}}}
+    let g:vim_addon_manager = {}
     let g:vim_addon_manager.log_to_buf = 1
-    let g:vim_addon_manager.scms.hg.clone = ['vam#vcs#MercurialCheckout']
     let c = get(g:, 'vim_addon_manager', {})
     let g:vim_addon_manager = c
     let c.plugin_root_dir = expand('$HOME/.vim/vim-addons', 1)
