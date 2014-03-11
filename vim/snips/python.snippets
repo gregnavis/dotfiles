@@ -189,3 +189,13 @@ snippet #! "shebang!"
 #!/usr/bin/env python
 # encoding: utf-8
 endsnippet
+
+snippet open "read-only open context manager"
+with open(${1:path}) as ${2:file_}:
+	${3:pass}
+endsnippet
+
+snippet openw "write open context manager"
+with open(${1:path}, 'w') as ${2:file_}:
+	${3:pass}
+endsnippet
