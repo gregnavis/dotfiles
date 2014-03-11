@@ -157,7 +157,7 @@ nnoremap <leader>a :Ag<SPACE>
 
 " UltiSnips
 "" cannot use snippets because it's reserved for SnipMate snippets
-let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+let g:UltiSnipsSnippetDirectories = ['snips']
 
 " make
 nnoremap <leader>m :make<SPACE>
