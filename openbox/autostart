@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source "$HOME/.startx"
+. "$HOME/.startx"
