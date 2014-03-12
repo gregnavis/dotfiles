@@ -2,3 +2,4 @@
 
 export DEBEMAIL="grzegorz@niewisiewicz.pl"
 export DEBFULLNAME="Grzegorz Niewisiewicz"
+export PA_FILE="$HOME/Dropbox/pa.json"
