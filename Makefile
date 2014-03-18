@@ -31,6 +31,11 @@ ctags:
 env:
 	cp env $(INSTALL)/.env
 
+.PHONY: fbpanel
+fbpanel:
+	-mkdir $(INSTALL)/.config/fbpanel
+	cp fbpanel/* $(INSTALL)/.config/fbpanel
+
 .PHONY: fonts.conf
 fonts.conf:
 	cp fonts.conf $(INSTALL)/.fonts.conf
