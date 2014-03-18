@@ -6,6 +6,10 @@ VIM_DIR = $(INSTALL)/.vim
 .PHONY: default
 default:
 
+.PHONY: all
+all: ack bash ctags env fbpanel fonts.conf git gitconfig gitignore hg i3 \
+	i3status inputrc openbox pip startx vim xmodmap Xresources xsession
+
 .PHONY: show-config
 show-config:
 	@echo "HOSTNAME=$(HOSTNAME)"
