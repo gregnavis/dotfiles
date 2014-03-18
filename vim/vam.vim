@@ -48,6 +48,8 @@ fun! SetupVAM()
                             \'Markdown_syntax',
                             \'endwise',
                             \'commentary',
+                            \'github:kana/vim-textobj-user',
+                            \'github:bps/vim-textobj-python',
                             \'Emmet'], {'auto_install' : 1})
 endfun
 call SetupVAM()
