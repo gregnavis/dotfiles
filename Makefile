@@ -6,6 +6,10 @@ VIM_DIR = $(INSTALL)/.vim
 .PHONY: default
 default:
 
+.PHONY: all
+all: ack bash ctags env fbpanel fonts.conf git gitconfig gitignore hg i3 \
+	i3status inputrc openbox pip startx vim xmodmap Xresources xsession
+
 .PHONY: show-config
 show-config:
 	@echo "HOSTNAME=$(HOSTNAME)"
@@ -90,18 +94,9 @@ vim:
 	cp vimrc $(INSTALL)/.vimrc
 	cp gvimrc $(INSTALL)/.gvimrc
 
-.PHONY: xmobar
-xmobar:
-	cp xmobarrc $(INSTALL)/.xmobarrc
-
 .PHONY: xmodmap
 xmodmap:
 	cp xmodmap $(INSTALL)/.xmodmap
-
-.PHONY: xmonad
-xmonad:
-	-mkdir $(INSTALL)/.xmonad
-	cp xmonad/xmonad.hs $(INSTALL)/.xmonad/xmonad.hs
 
 .PHONY: Xresources
 Xresources:
