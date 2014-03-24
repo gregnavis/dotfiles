@@ -161,8 +161,12 @@ def __str__(self):
 	return ${1:self}
 endsnippet
 
-snippet rnie "raise the NotImplementedError exception"
+snippet rnie "raise NotImplementedError"
 raise NotImplementedError()
+endsnippet
+
+snippet rve "raise ValueError"
+raise ValueError(${1:'message'})
 endsnippet
 
 snippet call "the __call__ method"
