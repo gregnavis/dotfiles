@@ -2,6 +2,7 @@ HOSTNAME ?= $(shell hostname)
 INSTALL ?= $(HOME)
 
 VIM_DIR = $(INSTALL)/.vim
+VIM_PLUGIN_DIR = $(VIM_DIR)/plugin
 
 .PHONY: default
 default:
@@ -90,6 +91,8 @@ startx:
 .PHONY: vim
 vim:
 	-mkdir $(VIM_DIR)
+	-mkdir $(VIM_PLUGIN_DIR)
+	ln -fs ../vim-addons/github-python-rope-ropevim/ropevim.vim $(VIM_PLUGIN_DIR)/ropevim.vim
 	cp -r vim/* $(VIM_DIR)
 	cp vimrc $(INSTALL)/.vimrc
 	cp gvimrc $(INSTALL)/.gvimrc

@@ -50,6 +50,7 @@ fun! SetupVAM()
                             \'commentary',
                             \'github:kana/vim-textobj-user',
                             \'github:bps/vim-textobj-python',
+                            \'github:python-rope/ropevim',
                             \'Emmet'], {'auto_install' : 1})
 endfun
 call SetupVAM()
