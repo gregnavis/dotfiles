@@ -153,7 +153,8 @@ let g:ctrlp_map = '<leader>p'
 nnoremap <leader>P :CtrlPBuffer<CR>
 
 " Ag
-nnoremap <leader>a :Ag<SPACE>
+nnoremap <leader>a :Ag!<SPACE>
+nnoremap <leader>w :Ag! -w <C-R><C-W><CR>
 
 " UltiSnips
 "" cannot use snippets because it's reserved for SnipMate snippets
