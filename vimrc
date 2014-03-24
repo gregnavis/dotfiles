@@ -38,7 +38,7 @@ set laststatus=1
 set directory=$HOME/.vim/swapfiles
 
 " Miscellaneous
-set nohidden
+set hidden
 set shortmess=aI
 set visualbell
 
