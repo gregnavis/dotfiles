@@ -188,6 +188,9 @@ let g:user_emmet_prev_key = '<C-k>'
 " Tags
 nnoremap <leader>t :tag<SPACE>
 
+" Rope
+let g:ropevim_enable_shortcuts = 0
+
 " Shell
 if has('gui_running')
     nnoremap <leader>x :silent :!x-terminal-emulator >& /dev/null &<CR>
