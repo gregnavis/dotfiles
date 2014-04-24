@@ -146,7 +146,7 @@ nnoremap <leader>n :NERDTree<CR>
 "" show files relative to the cwd
 let g:ctrlp_working_path_mode=0
 let g:ctrlp_custom_ignore = {
-\   'dir': '\v[\/](\.git|\.hg|\.svn|bin|lib|man)$',
+\   'dir': '\v[\/](\.git|\.hg|\.svn|bin|lib|man|htmlcov)$',
 \   'file': '\v\.(exe|so|dll|pyc|o)$',
 \}
 let g:ctrlp_map = '<leader>p'
