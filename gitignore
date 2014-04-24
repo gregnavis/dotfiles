@@ -3,3 +3,9 @@
 *.pyc
 
 .sass-cache
+
+.ropeproject
+.vagrant
+
+*.sqlite
+*.sqlite3
