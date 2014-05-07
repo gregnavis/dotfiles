@@ -1,3 +1,11 @@
+set colored-stats on
+set completion-ignore-case on
+set completion-map-case on
+set completion-query-items -1
+set page-completions off
+set print-completions-horizontally on
+set show-all-if-ambiguous on
+
 "\C-ga": "git add "
 "\C-gb": "git branch "
 "\C-gc": "git checkout "
