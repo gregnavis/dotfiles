@@ -39,10 +39,18 @@ function __prompt_command() {
     PS1+="\\D{%H:%M:%S} "
 
     if [ -n "$VIRTUAL_ENV" ]; then
-        PS1+="${VIRTUAL_ENV#${WORKON_HOME}/} "
+        PS1+="${green}${VIRTUAL_ENV#${WORKON_HOME}/}${reset} "
     fi
 
-    PS1+="${bold}\\w${reset}\\n"
+    PS1+="${bold}\\w${reset} "
+
+    local branch=`git branch 2> /dev/null | grep '*' | cut -c3-`
+
+    if [ -n "${branch}" ]; then
+        PS1+="git:${red}${branch}${reset}"
+    fi
+
+    PS1+="\\n"
 
     if [ "$USER" == "root" ]; then
         PS1+="${red}"
