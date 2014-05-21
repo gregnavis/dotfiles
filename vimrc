@@ -1,14 +1,16 @@
-" Welcome in Vim! The lines below are recommended by VAM.
+" Welcome in Vim!
 set nocompatible
-filetype indent plugin on
-syntax on
-
-" Load VAM
-source ~/.vim/vam.vim
 
 " Encoding
 set encoding=utf8
 set fileencoding=utf8
+
+" Vundle
+filetype off
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
+source ~/.vim/bundles.vim
+filetype plugin indent on
 
 " Indentation
 set expandtab
