@@ -275,6 +275,9 @@
     <keybind key="W-m">
       <action name="ToggleMaximize"/>
     </keybind>
+    <keybind key="W-S-m">
+        <action name="ToggleFullscreen"/>
+    </keybind>
     <keybind key="W-period">
       <action name="Close"/>
     </keybind>
