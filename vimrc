@@ -151,6 +151,8 @@ let g:ctrlp_custom_ignore = {
 \   'dir': '\v[\/](\.git|\.hg|\.svn|bin|lib|man|htmlcov)$',
 \   'file': '\v\.(exe|so|dll|pyc|o)$',
 \}
+"" don't limit the number of files
+let g:ctrlp_max_files=0
 let g:ctrlp_map = '<leader>p'
 nnoremap <leader>P :CtrlPBuffer<CR>
 
