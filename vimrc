@@ -22,6 +22,7 @@ set tabstop=4
 " Searching
 set incsearch
 set smartcase
+set ignorecase
 set hlsearch
 set nowrapscan
 
