@@ -5,12 +5,14 @@ VIM_DIR = $(INSTALL)/.vim
 VIM_BUNDLE_DIR = $(VIM_DIR)/bundle
 VIM_VUNDLE_DIR = $(VIM_BUNDLE_DIR)/vundle
 
+YCM_BUILD = /tmp/ycm_build
+
 .PHONY: default
 default:
 
 .PHONY: all
 all: ack bash ctags env fbpanel fonts.conf git gitconfig gitignore hg \
-	inputrc openbox pip startx vim xmodmap Xresources xsession
+	inputrc openbox pip startx vim vim-ycm xmodmap Xresources xsession
 
 .PHONY: show-config
 show-config:
@@ -86,10 +88,14 @@ startx:
 vim:
 	-mkdir $(VIM_DIR)
 	cp -r vim/* $(VIM_DIR)
-	cp vimrc $(INSTALL)/.vimrc
-	cp gvimrc $(INSTALL)/.gvimrc
 	[ -e $(VIM_VUNDLE_DIR) ] || git clone https://github.com/gmarik/vundle.git $(VIM_VUNDLE_DIR)
 	vim +BundleInstall +qall
+
+.PHONY: vim-ycm
+vim-ycm:
+	mkdir $(YCM_BUILD)
+	cd $(YCM_BUILD) && cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=/usr/lib/llvm-3.5 . $(VIM_DIR)/bundle/YouCompleteMe/third_party/ycmd/cpp
+	make -C $(YCM_BUILD) ycm_support_libs
 
 .PHONY: xmodmap
 xmodmap:
