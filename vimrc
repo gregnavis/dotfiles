@@ -133,18 +133,6 @@ nnoremap <C-g>d :Gdiff<CR>
 "" <leader>/ toggles search highlight
 nnoremap <silent> <leader>/ :set hlsearch!<CR>
 
-" NERDTree
-let g:NERDTreeChDirMode=2
-let g:NERDTreeShowBookmarks=1
-let NERDTreeIgnore = [
-\   '\.exe$',
-\   '\.so$',
-\   '\.dll$',
-\   '\.pyc$',
-\   '\.o$'
-\]
-nnoremap <leader>n :NERDTree<CR>
-
 " CtrlP
 "" show files relative to the cwd
 let g:ctrlp_working_path_mode=0
