@@ -9,8 +9,8 @@ VIM_VUNDLE_DIR = $(VIM_BUNDLE_DIR)/vundle
 default:
 
 .PHONY: all
-all: ack bash ctags env fbpanel fonts.conf git gitconfig gitignore hg i3 \
-	i3status inputrc openbox pip startx vim xmodmap Xresources xsession
+all: ack bash ctags env fbpanel fonts.conf git gitconfig gitignore hg \
+	inputrc openbox pip startx vim xmodmap Xresources xsession
 
 .PHONY: show-config
 show-config:
@@ -63,15 +63,6 @@ gitignore:
 hg:
 	cp hgrc $(INSTALL)/.hgrc
 	cp hgignore $(INSTALL)/.hgignore
-
-.PHONY: i3
-i3:
-	-mkdir $(INSTALL)/.i3
-	cp i3/config $(INSTALL)/.i3/config
-
-.PHONY: i3status
-i3status:
-	cp i3status.conf $(INSTALL)/.i3status.conf
 
 .PHONY: inputrc
 inputrc:
