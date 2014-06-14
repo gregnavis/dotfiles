@@ -178,6 +178,9 @@ let g:user_emmet_expandabbr_key = '<C-e>'
 let g:user_emmet_next_key = '<C-j>'
 let g:user_emmet_prev_key = '<C-k>'
 
+" YouCompleteMe
+let g:ycm_use_ultisnips_completer = 0
+
 " Tags
 nnoremap <leader>t :tag<SPACE>
 
