@@ -17,14 +17,12 @@ fi
 # don't annoy me!
 xset -b
 
-# start Dropbox (if installed)
-if command -v dropbox
-then
-    dropbox start
-fi
-
-# start the panel
-fbpanel &
-
-# save my eyes!
-redshift -l 53:14 &
+# run programs
+dropbox start
+workrave &
+gtk-redshift -r -l 53:14 &
+xchat --minimize=2 &
+hamster-time-tracker &
+blueman-applet &
+gvim -class notes -O3 Notebook/Thoughtstream.md Notebook/Notebook.md Notebook/ServerLog.md
+tint2 &

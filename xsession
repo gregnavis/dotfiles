@@ -1,4 +1,3 @@
 #!/bin/bash
 
-source "$HOME/.startx"
-openbox
+exec openbox-session
