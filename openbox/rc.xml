@@ -401,6 +401,18 @@
           <command>xbacklight -dec 10</command>
       </action>
     </keybind>
+    <!-- Personal analytics -->
+    <keybind key="W-a">
+      <keybind key="m">
+        <keybind key="1"><action name="Execute"><command>record-variable mood bad</command></action></keybind>
+        <keybind key="2"><action name="Execute"><command>record-variable mood netural</command></action></keybind>
+        <keybind key="3"><action name="Execute"><command>record-variable mood good</command></action></keybind>
+      </keybind>
+      <keybind key="d">
+        <keybind key="i"><action name="Execute"><command>record-event internal-distraction</command></action></keybind>
+        <keybind key="e"><action name="Execute"><command>record-event external-distraction</command></action></keybind>
+      </keybind>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
