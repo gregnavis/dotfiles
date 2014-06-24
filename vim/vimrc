@@ -73,15 +73,15 @@ nnoremap k gk
 " Configuration
 
 "" reload
-nnoremap <leader>cr :source ~/.vimrc<CR>
+nnoremap <leader>Cr :source ~/.vimrc<CR>
 
 "" toggling numbers
-nnoremap <leader>cn :setlocal number!<CR>
+nnoremap <leader>Cn :setlocal number!<CR>
 
 "" spelling
-nnoremap <silent> <leader>cst :setlocal spell!<CR>
-nnoremap <silent> <leader>cse :setlocal spelllang=en<CR>
-nnoremap <silent> <leader>csp :setlocal spelllang=pl<CR>
+nnoremap <silent> <leader>Cst :setlocal spell!<CR>
+nnoremap <silent> <leader>Cse :setlocal spelllang=en<CR>
+nnoremap <silent> <leader>Csp :setlocal spelllang=pl<CR>
 
 
 "" toggling background color
@@ -99,21 +99,11 @@ nnoremap <silent> <leader>cb :call ToggleBackground()<CR>
 nnoremap ; :
 vnoremap ; :
 
-"" make window navigation easier
-nnoremap <C-h> <C-w>h
-nnoremap <C-k> <C-w>k
-nnoremap <C-j> <C-w>j
-nnoremap <C-l> <C-w>l
-
-"" make opening and closing windows easier
-nnoremap <C-c> :close<CR>
-nnoremap <C-o> <C-w>o
-
 "" replacing
 nnoremap <leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 "" split windows in a smart way
-function! SplitBrain()
+function! New()
     if 2 * winwidth(0) > 5 * winheight(0)
         execute 'vertical new +setfiletype\ ' . &filetype
     else
@@ -121,14 +111,14 @@ function! SplitBrain()
     endif
 endfunction
 
-nnoremap <C-n> :call SplitBrain()<CR>
-
-"" switch to the other buffer
-nnoremap <C-s> <C-^>
+nnoremap <C-n> :call New()<CR>
 
 "" Fugitive mappings
-nnoremap <C-g>s :Gstatus<CR>
-nnoremap <C-g>d :Gdiff<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gd :Gdiff<CR>
 
 "" <leader>/ toggles search highlight
 nnoremap <silent> <leader>/ :set hlsearch!<CR>
@@ -150,15 +140,16 @@ nnoremap <leader>a :Ag!<SPACE>
 nnoremap <leader>w :Ag! -w <C-R><C-W><CR>
 
 " UltiSnips
+
 "" cannot use snippets because it's reserved for SnipMate snippets
 let g:UltiSnipsSnippetDirectories = ['snips']
+
+"" we need to use CTRL-j in order to avoid conflicts with YCM
+let g:UltiSnipsExpandTrigger = '<c-j>'
 
 " make
 nnoremap <leader>m :make<SPACE>
 nnoremap <leader>M :make<CR>
-
-" QuickRun
-nnoremap <silent> <leader>q :QuickRun<CR>
 
 " Syntastic
 let g:syntastic_python_checkers = ['pylint', 'pep8']
@@ -172,20 +163,8 @@ let g:syntastic_python_pep8_args = '--max-line-length=80'
 
 nnoremap <leader>l :SyntasticCheck<CR>
 
-" Emmet
-
-let g:user_emmet_expandabbr_key = '<C-e>'
-let g:user_emmet_next_key = '<C-j>'
-let g:user_emmet_prev_key = '<C-k>'
-
 " YouCompleteMe
 let g:ycm_use_ultisnips_completer = 0
-
-" Tags
-nnoremap <leader>t :tag<SPACE>
-
-" Rope
-let g:ropevim_enable_shortcuts = 0
 
 " Shell
 if has('gui_running')
