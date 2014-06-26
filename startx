@@ -25,4 +25,5 @@ xchat --minimize=2 &
 hamster-time-tracker &
 blueman-applet &
 gvim -class notes -O3 Notebook/Thoughtstream.md Notebook/Notebook.md Notebook/ServerLog.md
+synergy &
 tint2 &
