@@ -84,6 +84,11 @@ pip:
 startx:
 	cp startx $(INSTALL)/.startx
 
+.PHONY: tint2
+tint2:
+	-mkdir -p $(INSTALL)/.config/tint2
+	cp tint2rc $(INSTALL)/.config/tint2/
+
 .PHONY: vim
 vim:
 	-mkdir $(VIM_DIR)
