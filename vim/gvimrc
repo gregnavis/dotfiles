@@ -3,3 +3,6 @@ set guioptions=ci
 
 " set the font
 set guifont=Inconsolata\ Medium\ 14
+
+" don't hide my pointer
+set nomousehide
