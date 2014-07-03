@@ -1,0 +1,33 @@
+snippet btc "a Buster.js test case"
+buster.testCase('${1:name}', {
+${2}
+});
+endsnippet
+
+snippet bt "a Buster.js test"
+'${1:name}': function () {
+${2}
+}
+endsnippet
+
+snippet bas "a Buster.js assert"
+assert.same(${1:actual}, ${2:expected});
+endsnippet
+
+snippet qt "a QUnit test"
+QUnit.test('${1:name}', function (assert) {
+${2}
+});
+endsnippet
+
+snippet qase "a QUnit assert.strictEqual"
+assert.strictEqual(${1:actual}, ${2:expected});
+endsnippet
+
+snippet qade "a QUnit assert.deepEqual"
+assert.deepEqual(${1:actual}, ${2:expected});
+endsnippet
+
+snippet r "a Node.JS require"
+var ${1:name} = require('$1');
+endsnippet
