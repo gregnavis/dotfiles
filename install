@@ -1,0 +1,90 @@
+#!/bin/bash
+
+confirm() {
+    while true; do
+        read -p "$1 (y/n) " -n 1 -r
+        echo
+        case "${REPLY}" in
+        y) return 0 ;;
+        n) return 1 ;;
+        *) echo "Only lowercase y and n are valid answers." ;;
+        esac
+    done
+}
+
+HOSTNAME=$(hostname)
+INSTALL="${INSTALL:-${HOME}}"
+
+VIM_DIR="${INSTALL}/.vim"
+VIM_BUNDLE_DIR="${VIM_DIR}/bundle"
+VIM_VUNDLE_DIR="${VIM_BUNDLE_DIR}/vundle"
+
+echo "Installing on ${HOSTNAME} to ${INSTALL}"
+
+echo " * environment variables"
+cp env "${INSTALL}/.env"
+
+echo " * bash"
+mkdir "${INSTALL}/.bash" >& /dev/null
+cp bash/* "${INSTALL}/.bash"
+cp bashrc "${INSTALL}/.bashrc"
+cp bash_profile "${INSTALL}/.bash_profile"
+
+echo " * readline"
+cp inputrc "${INSTALL}/.inputrc"
+
+echo " * ctags"
+cp ctags "${INSTALL}/.ctags"
+
+echo " * fonts"
+cp fonts.conf "${INSTALL}/.fonts.conf"
+
+echo " * git"
+cp gitconfig "${INSTALL}/.gitconfig"
+cp gitignore "${INSTALL}/.gitignore"
+
+echo " * Mercurial"
+cp hgrc "${INSTALL}/.hgrc"
+cp hgignore "${INSTALL}/.hgignore"
+
+echo " * Openbox"
+mkdir -p "${INSTALL}/.config/openbox" >& /dev/null
+cp -r openbox/* "${INSTALL}/.config/openbox"
+
+echo " * pip"
+mkdir "${INSTALL}/.pip" >& /dev/null
+cp -r pip/* "${INSTALL}/.pip"
+
+echo " * tint2"
+mkdir -p "${INSTALL}/.config/tint2" >& /dev/null
+cp tint2rc "${INSTALL}/.config/tint2"
+
+echo " * vim"
+mkdir "${VIM_DIR}" >& /dev/null
+cp -r vim/* "${VIM_DIR}"
+
+echo " * X Window"
+cp xmodmap "${INSTALL}/.xmodmap"
+cp xinitrc "${INSTALL}/.xinitrc"
+mkdir "${INSTALL}/.Xresources.d" >& /dev/null
+cp -r Xresources.d/* "${INSTALL}/.Xresources.d"
+cp -r dependencies/base16-xresources/*.xresources "${INSTALL}/.Xresources.d/colors"
+cp Xresources "${INSTALL}/.Xresources"
+cp startx "${INSTALL}/.startx"
+
+echo " * custom binaries"
+mkdir "${INSTALL}/.bin" >& /dev/null
+cp -r bin/* "${INSTALL}/.bin"
+
+if confirm "Install/updated Vundle and the installed bundles?"
+then
+    [ -e ${VIM_VUNDLE_DIR} ] || git clone https://github.com/gmarik/vundle.git ${VIM_VUNDLE_DIR}
+    vim +BundleInstall +qall
+fi
+
+if confirm "Build and install YouCompleteMe?"
+then
+    YCM_BUILD=$(mktemp -d /tmp/ycm_build.XXXXXX)
+    cd "${YCM_BUILD}" && cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=/usr/lib/llvm-3.5 . "${VIM_DIR}/bundle/YouCompleteMe/third_party/ycmd/cpp"
+    make -C "${YCM_BUILD}" ycm_support_libs
+fi

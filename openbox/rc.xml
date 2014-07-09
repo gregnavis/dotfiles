@@ -338,11 +338,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>urxvt</name>
-        </startupnotify>
-        <command>urxvtcd</command>
+        <command>terminal</command>
       </action>
     </keybind>
     <keybind key="W-S-Return">
@@ -351,7 +347,7 @@
           <enabled>true</enabled>
           <name>GVim</name>
         </startupnotify>
-        <command>~/.bin/start-gvim</command>
+        <command>gvim</command>
       </action>
     </keybind>
     <keybind key="W-p">
@@ -367,12 +363,12 @@
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer -q set PCM 5%-</command>
+        <command>amixer -q set Master 5%-</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>amixer -q set PCM 5%+</command>
+        <command>amixer -q set Master 5%+</command>
       </action>
     </keybind>
     <keybind key="A-XF86AudioMute">
@@ -776,52 +772,6 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <application class="Firefox">
-      <desktop>1</desktop>
-      <decor>no</decor>
-      <position>
-        <x>50%</x>
-        <y>0</y>
-      </position>
-      <size>
-        <width>50%</width>
-        <height>100%</height>
-      </size>
-    </application>
-
-    <application class="Gvim">
-      <decor>no</decor>
-    </application>
-
-    <application class="gvim-dev">
-      <desktop>1</desktop>
-      <decor>no</decor>
-      <position>
-        <x>0</x>
-        <y>0</y>
-      </position>
-      <size>
-        <width>50%</width>
-        <height>100%</height>
-      </size>
-    </application>
-
-    <application class="URxvt">
-      <decor>no</decor>
-    </application>
-
-    <application class="notes">
-      <desktop>4</desktop>
-      <fullscreen>yes</fullscreen>
-    </application>
-
-    <application class="Hamster-time-tracker">
-      <layer>above</layer>
-      <position>
-        <x>center</x>
-        <y>center</y>
-      </position>
-    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.

@@ -1,29 +1,31 @@
 #!/bin/bash
 
-WALLPAPER=~/.wallpaper
-XMODMAP=~/.xmodmap
+WALLPAPER="${HOME}/.wallpaper"
+XMODMAP="${HOME}/.xmodmap"
 
 # set environment variables
-if [ -r "$HOME/.env" ]; then
-    . $HOME/.env
-fi
+[ -r "${HOME}/.env" ] && source ${HOME}/.env
 
 # set the background
-[ -r $WALLPAPER ] && hsetroot -center $WALLPAPER
+[ -r "${WALLPAPER}" ] && hsetroot -center "${WALLPAPER}"
 
 # remap keys
-[ -r $XMODMAP ] && xmodmap $XMODMAP
+[ -r "${XMODMAP}" ] && xmodmap "${XMODMAP}"
 
 # don't annoy me!
 xset -b
 
+# install Xresources
+[ -r "${HOME}/.Xresources" ] && xrdb -merge "${HOME}/.Xresources"
+
 # run programs
-dropbox start
-workrave &
-gtk-redshift -r -l 53:14 &
-xchat --minimize=2 &
-hamster-time-tracker &
-blueman-applet &
-gvim -class notes -O3 Notebook/Thoughtstream.md Notebook/Notebook.md Notebook/ServerLog.md
-synergy &
-tint2 &
+
+optrun() {
+    command "$1" >& /dev/null && $@ &
+}
+
+optrun dropbox start
+optrun workrave
+optrun redshift -r -l 53:14
+optrun synergy
+optrun tint2

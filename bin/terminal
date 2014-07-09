@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(command -v urxvtc >& /dev/null && urxvtc) || (command -v urxvt >& /dev/null && urxvt) || (command -v xterm >& /dev/null && xterm)

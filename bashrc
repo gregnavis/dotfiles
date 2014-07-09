@@ -72,4 +72,8 @@ HISTFILESIZE=7500
 HISTSIZE=5000
 
 source "$HOME/.bash/fabric-completion.bash"
-eval "$(pip completion --bash)"
+command -v pip >& /dev/null && eval "$(pip completion --bash)"
+
+# exit the script with a successful command so bash doesn't report an error
+# status immediately after starting
+true
