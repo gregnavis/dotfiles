@@ -41,7 +41,7 @@ Rxvt.urlLauncher:xdg-open
 
 !matchers
 
-Rxvt.perl-ext: default,matcher
+Rxvt.perl-ext: default,matcher,font-size
 Rxvt.matcher.button: 1
 
 !! clickable Python tracebacks
@@ -51,3 +51,7 @@ Rxvt.matcher.launcher.1: gvim --remote-silent +$2 $1
 !! clickable Python back traces in pdb
 Rxvt.matcher.pattern.2: (.*)(\\d+)\\S*\\(\\)
 Rxvt.matcher.launcher.2: gvim --remote-silent +$2 $1
+
+!! font size manipulation
+Rxvt.keysym.C-K: perl:font-size:increase
+Rxvt.keysym.C-J: perl:font-size:decrease
