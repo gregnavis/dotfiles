@@ -74,6 +74,7 @@ cp -r Xresources.d/* "${INSTALL}/.Xresources.d"
 cp -r dependencies/base16-xresources/*.xresources "${INSTALL}/.Xresources.d/colors"
 cp Xresources "${INSTALL}/.Xresources"
 cp startx "${INSTALL}/.startx"
+cp -r local/* "${INSTALL}/.local"
 
 echo " * custom binaries"
 mkdir "${INSTALL}/.bin" >& /dev/null
