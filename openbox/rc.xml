@@ -773,6 +773,7 @@
   </menu>
   <applications>
     <application class="Birdie">
+      <desktop>all</desktop>
       <layer>above</layer>
     </application>
     <!--
