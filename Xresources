@@ -37,7 +37,7 @@ Rxvt.print-pipe: cat > $(mktemp --tmpdir="$HOME" console.XXX)
 Rxvt.pointerBlank: true
 
 !! use a generic browser
-Rxvt.urlLauncher: x-www-browser
+Rxvt.urlLauncher:xdg-open
 
 !matchers
 
