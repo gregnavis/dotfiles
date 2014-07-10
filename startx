@@ -29,4 +29,5 @@ optrun workrave
 optrun redshift -r -l 53:14
 optrun synergy
 optrun pasystray
+optrun urxvtd
 optrun tint2
