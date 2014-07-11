@@ -355,6 +355,21 @@
         <command>dmenu_run</command>
       </action>
     </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
+    <keybind key="W-n">
+      <action name="Execute">
+          <command>gvim ~/Notebook.md</command>
+      </action>
+    </keybind>
     <!-- Volume control -->
     <keybind key="XF86AudioMute">
       <action name="Execute">
