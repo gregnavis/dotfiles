@@ -89,6 +89,6 @@ fi
 if confirm "Build and install YouCompleteMe?"
 then
     YCM_BUILD=$(mktemp -d /tmp/ycm_build.XXXXXX)
-    cd "${YCM_BUILD}" && cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=/usr/lib/llvm-3.5 . "${VIM_DIR}/bundle/YouCompleteMe/third_party/ycmd/cpp"
+    cd "${YCM_BUILD}" && cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=/usr/ . "${VIM_DIR}/bundle/YouCompleteMe/third_party/ycmd/cpp"
     make -C "${YCM_BUILD}" ycm_support_libs
 fi
