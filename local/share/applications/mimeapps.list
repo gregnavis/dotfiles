@@ -3,3 +3,4 @@
 text/plain=gvim.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/http=firefox.desktop
+application/pdf=evince.desktop
