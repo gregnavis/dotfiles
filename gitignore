@@ -11,3 +11,5 @@
 *.sqlite3
 
 node_modules
+
+.ruby-version
