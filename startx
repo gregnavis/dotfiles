@@ -25,7 +25,6 @@ optrun() {
 }
 
 optrun dropbox start
-optrun workrave
 optrun redshift -r -l 53:14
 optrun synergy
 optrun pasystray
