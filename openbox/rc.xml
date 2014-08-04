@@ -390,6 +390,11 @@
           <command>gvim ~/Notebook.md</command>
       </action>
     </keybind>
+    <keybind key="W-S-d">
+        <action name="Execute">
+            <command>gvim -c ":cd ~/p/dotfiles"</command>
+        </action>
+    </keybind>
     <!-- Volume control -->
     <keybind key="XF86AudioMute">
       <action name="Execute">
