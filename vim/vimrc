@@ -166,9 +166,11 @@ nnoremap <leader>l :SyntasticCheck<CR>
 " YouCompleteMe
 let g:ycm_use_ultisnips_completer = 0
 
-" Shell
+" Shell and Thunar
 if has('gui_running')
     nnoremap <leader>x :silent :!terminal >& /dev/null &<CR>
 else
     nnoremap <leader>x :shell<CR>
 endif
+
+nnoremap <leader>t :silent :!thunar &> /dev/null &<CR>
