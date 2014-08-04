@@ -380,7 +380,7 @@
         <command>thunar</command>
       </action>
     </keybind>
-    <keybind key="W-f">
+    <keybind key="W-b">
       <action name="Execute">
         <command>firefox</command>
       </action>
