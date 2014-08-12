@@ -33,6 +33,9 @@ set nonumber
 " Wild menu
 set wildmenu
 
+" No more annoyances!
+set nomore
+
 " Status line
 "" show the status line with more than one window
 set laststatus=1
