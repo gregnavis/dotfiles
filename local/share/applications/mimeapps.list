@@ -1,6 +1,6 @@
 
 [Default Applications]
 text/plain=gvim.desktop
-x-scheme-handler/https=firefox.desktop
-x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/http=chromium.desktop
 application/pdf=evince.desktop
