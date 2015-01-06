@@ -15,6 +15,29 @@ alias grep='grep --color=auto'
 alias cd='pushcd'
 alias b='popd > /dev/null'
 
+# git
+alias gs='git status -sb'
+alias gplom='git pull origin master'
+alias gpom='git push origin master'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gc='git commit -v'
+alias gca='git commit -a -v'
+alias gcam='git commit -a -m'
+alias gcaa='git commit -a --amend -v'
+alias gcaaC='git commit -a --amend -C HEAD'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias grh='git reset --hard'
+
+# heroku
+alias h='heroku'
+
+# Rails
+alias rdbdcm='rake db:drop db:create db:migrate'
+alias rdbdcms='rake db:drop db:create db:migrate db:seed'
+alias rdbs='rake db:seed'
+
 function __prompt_command() {
     local exit_code=`printf '%+3s' $?`
 
