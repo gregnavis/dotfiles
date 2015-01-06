@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ -r ~/.bash_profile ]; then
-    . ~/.bash_profile
-fi
-
 function pushcd {
     if [ $# -eq 0 ]; then
         pushd ~ > /dev/null
@@ -73,6 +69,19 @@ HISTSIZE=5000
 
 source "$HOME/.bash/fabric-completion.bash"
 command -v pip >& /dev/null && eval "$(pip completion --bash)"
+
+# initialize rbenv (if installed)
+if [ -d "$HOME/.rbenv" ]; then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
+export PATH
+
+# set environment variables
+if [ -r "$HOME/.env" ]; then
+    . $HOME/.env
+fi
 
 # exit the script with a successful command so bash doesn't report an error
 # status immediately after starting
