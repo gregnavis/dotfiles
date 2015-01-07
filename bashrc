@@ -21,6 +21,9 @@ alias cd='pushcd'
 alias b='popd > /dev/null'
 
 # git
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
 alias gs='git status -sb'
 alias gplom='git pull origin master'
 alias gpom='git push origin master'
@@ -33,6 +36,7 @@ alias gcaa='git commit -a --amend -v'
 alias gcaaC='git commit -a --amend -C HEAD'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gl='git log'
 alias grh='git reset --hard'
 
 # heroku
