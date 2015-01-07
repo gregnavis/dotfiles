@@ -37,7 +37,9 @@ alias gcaaC='git commit -a --amend -C HEAD'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git log'
+alias glg='git log --graph'
 alias grh='git reset --hard'
+alias gsh='git show'
 
 # heroku
 alias h='heroku'
