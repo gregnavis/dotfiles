@@ -21,6 +21,7 @@ alias cd='pushcd'
 alias b='popd > /dev/null'
 
 # git
+alias ga='git add'
 alias gb='git branch'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
