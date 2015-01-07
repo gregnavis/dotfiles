@@ -9,3 +9,5 @@
 	pager = less -+-RN -n
 [format]
 	pretty = %h %Cgreen%s%Creset %Cblue%an%Creset%d
+[push]
+    default = simple
