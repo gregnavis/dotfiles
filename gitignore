@@ -15,3 +15,5 @@ node_modules
 .ruby-version
 .idea
 coverage
+
+.DS_Store
