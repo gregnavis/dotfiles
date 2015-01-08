@@ -22,6 +22,7 @@ alias b='popd > /dev/null'
 
 # git
 alias ga='git add'
+alias gap='git add -p'
 alias gb='git branch'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
