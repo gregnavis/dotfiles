@@ -54,6 +54,7 @@ alias h='heroku'
 alias rdbdcm='rake db:drop db:create db:migrate'
 alias rdbdcms='rake db:drop db:create db:migrate db:seed'
 alias rdbs='rake db:seed'
+alias rt='rake test'
 
 function __prompt_command() {
     local exit_code=`printf '%+3s' $?`
