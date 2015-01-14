@@ -53,6 +53,7 @@ alias gr='git rm'
 alias h='heroku'
 
 # Rails
+alias rdbm='rake db:migrate'
 alias rdbdcm='rake db:drop db:create db:migrate'
 alias rdbdcms='rake db:drop db:create db:migrate db:seed'
 alias rdbs='rake db:seed'
