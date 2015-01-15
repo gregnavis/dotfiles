@@ -17,6 +17,10 @@ fi
 alias l='ls -l'
 alias la='ls -la'
 alias grep='grep --color=auto'
+alias g='grep'
+alias gr='grep -r'
+alias gi='grep -i'
+alias gri='grep -ri'
 alias cd='pushcd'
 alias b='popd > /dev/null'
 
