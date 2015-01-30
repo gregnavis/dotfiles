@@ -2,7 +2,11 @@
 set guioptions=ci
 
 " set the font
-set guifont=Inconsolata\ Medium\ 14
+if has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+else
+    set guifont=Inconsolata\ Medium\ 14
+endif
 
 " don't hide my pointer
 set nomousehide
