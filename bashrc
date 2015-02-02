@@ -88,6 +88,10 @@ function __prompt_command() {
     PS1="[${exit_code_format}${exit_code}${reset}] "
     PS1+="\\D{%H:%M:%S} "
 
+    if [ -n "${CTX_NAME}" ]; then
+        PS1+="[${red}${CTX_NAME}${reset}] "
+    fi
+
     if [ -n "$VIRTUAL_ENV" ]; then
         PS1+="${green}${VIRTUAL_ENV#${WORKON_HOME}/}${reset} "
     fi
@@ -143,6 +147,11 @@ export PATH
 # set environment variables
 if [ -r "$HOME/.env" ]; then
     . $HOME/.env
+fi
+
+# load bash-ctx
+if [ -r "${HOME}/.bash-ctx/bash-ctx" ]; then
+    . "${HOME}/.bash-ctx/bash-ctx"
 fi
 
 # exit the script with a successful command so bash doesn't report an error

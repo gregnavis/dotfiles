@@ -69,6 +69,7 @@ echo " * bash"
 mkdir "${INSTALL}/.bash" >& /dev/null
 cp bash/* "${INSTALL}/.bash"
 cp bashrc "${INSTALL}/.bashrc"
+cp bash_logout "${INSTALL}/.bash_logout"
 cp bash_profile "${INSTALL}/.bash_profile"
 
 echo " * readline"
