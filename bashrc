@@ -103,15 +103,7 @@ function __prompt_command() {
     local branch=`git branch 2> /dev/null | grep '*' | cut -c3-`
 
     if [ -n "${branch}" ]; then
-        PS1+="git:${red}${branch}${reset} "
-    fi
-
-    if [ -n "${RAILS_ENV}" ]; then
-        PS1+="rails:${red}${RAILS_ENV}${reset} "
-    fi
-
-    if [ -n "${RACK_ENV}" ]; then
-        PS1+="rack:${red}${RACK_ENV}${reset} "
+        PS1+="${red}${branch}${reset} "
     fi
 
     PS1+="\\n"
