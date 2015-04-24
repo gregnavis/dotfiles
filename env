@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export DEBEMAIL="grzegorz@niewisiewicz.pl"
-export DEBFULLNAME="Grzegorz Niewisiewicz"
 export PA_FILE="$HOME/Dropbox/pa.json"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export PATH="/usr/local/heroku/bin:$HOME/.bin:$PATH"
