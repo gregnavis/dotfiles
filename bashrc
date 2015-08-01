@@ -61,15 +61,7 @@ alias gresh='git reset --hard'
 alias gs='git status -sb'
 alias gsh='git show'
 
-# heroku
-alias h='heroku'
-
-# Rails
-alias rdbm='rake db:migrate'
-alias rdbdcm='rake db:drop db:create db:migrate'
-alias rdbdcms='rake db:drop db:create db:migrate db:seed'
-alias rdbs='rake db:seed'
-alias rt='rake test'
+alias .update='sudo yum update'
 
 function __prompt_command() {
     local exit_code=`printf '%+3s' $?`
