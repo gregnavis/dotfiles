@@ -136,8 +136,8 @@ if [ -r "$HOME/.env" ]; then
 fi
 
 # load bash-ctx
-if [ -r "${HOME}/.bash-ctx/bash-ctx" ]; then
-    . "${HOME}/.bash-ctx/bash-ctx"
+if [ -r "${HOME}/.bash-ctx.source" ]; then
+    . "${HOME}/.bash-ctx.source"
 fi
 
 # exit the script with a successful command so bash doesn't report an error
