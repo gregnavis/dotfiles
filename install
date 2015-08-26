@@ -94,6 +94,9 @@ echo " * vim"
 mkdir "${VIM_DIR}" >& /dev/null
 cp -r vim/* "${VIM_DIR}"
 
+echo " * tmux"
+cp tmux.conf "${INSTALL}/.tmux.conf"
+
 if confirm "Install/updated Vundle and the installed bundles?"
 then
     if [ -e ${VIM_VUNDLE_DIR} ]; then
