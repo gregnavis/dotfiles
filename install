@@ -27,7 +27,7 @@ echo "  VIM_BUNDLE_DIR=${VIM_BUNDLE_DIR}"
 echo "  VIM_VUNDLE_DIR=${VIM_VUNDLE_DIR}"
 echo
 
-if [ "$OSTYPE" == "darwin14" ]; then
+if [ "$OSTYPE" == "darwin14" -o "$OSTYPE" == "darwin15" ]; then
     # OS X
     echo "No OS X-specific installs"
 else
