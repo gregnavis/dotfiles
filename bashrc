@@ -81,22 +81,26 @@ function __prompt_command() {
     fi
 
     PS1="[${exit_code_format}${exit_code}${reset}] "
-    PS1+="\\D{%H:%M:%S} "
+    PS1+="\\D{%H:%M:%S}"
 
     if [ -n "${CTX_NAME}" ]; then
-        PS1+="[${red}${CTX_NAME}${reset}] "
+        PS1+=" [${red}${CTX_NAME}${reset}]"
     fi
 
     if [ -n "$VIRTUAL_ENV" ]; then
-        PS1+="${green}${VIRTUAL_ENV#${WORKON_HOME}/}${reset} "
+        PS1+=" ${green}${VIRTUAL_ENV#${WORKON_HOME}/}${reset}"
     fi
 
-    PS1+="${bold}\\w${reset} "
+    PS1+=" ${bold}\\w${reset}"
 
     local branch=`git branch 2> /dev/null | grep '*' | cut -c3-`
 
     if [ -n "${branch}" ]; then
-        PS1+="${red}${branch}${reset} "
+        PS1+=" ${red}${branch}${reset}"
+    fi
+
+    if [ -n "$PS1_NOTE" ]; then
+        PS1+=" (${PS1_NOTE})"
     fi
 
     PS1+="\\n"
@@ -113,6 +117,13 @@ function __prompt_command() {
         PS1+="\\u@\\H"
     fi
     PS1+="\\$ ${reset}"
+}
+
+function note() {
+    PS1_NOTE="$1"
+    if [ -z "${PS1_NOTE}" ]; then
+        unset PS1_NOTE
+    fi
 }
 
 PROMPT_COMMAND=__prompt_command
