@@ -1,6 +1,5 @@
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Raimondi/delimitMate'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'bps/vim-textobj-python'
 Bundle 'chriskempson/base16-vim'
 Bundle 'editorconfig/editorconfig-vim'
