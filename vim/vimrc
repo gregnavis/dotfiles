@@ -60,11 +60,7 @@ filetype plugin on
 
 " Syntax highlight
 syntax on
-if has('gui_running')
-    colorscheme base16-default
-else
-    colorscheme default
-endif
+colorscheme plum
 
 " Mappings
 let mapleader = ","
@@ -72,20 +68,6 @@ let mapleader = ","
 "" make j and k use logical lines
 nnoremap j gj
 nnoremap k gk
-
-" Configuration
-
-"" reload
-nnoremap <leader>Cr :source ~/.vimrc<CR>
-
-"" toggling numbers
-nnoremap <leader>Cn :setlocal number!<CR>
-
-"" spelling
-nnoremap <silent> <leader>Cst :setlocal spell!<CR>
-nnoremap <silent> <leader>Cse :setlocal spelllang=en<CR>
-nnoremap <silent> <leader>Csp :setlocal spelllang=pl<CR>
-
 
 "" toggling background color
 function! ToggleBackground()
@@ -97,10 +79,6 @@ function! ToggleBackground()
 endfunction
 
 nnoremap <silent> <leader>cb :call ToggleBackground()<CR>
-
-"" switch : and ; in the normal and visual mode
-nnoremap ; :
-vnoremap ; :
 
 "" replacing
 nnoremap <leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
@@ -116,27 +94,8 @@ endfunction
 
 nnoremap <C-n> :call New()<CR>
 
-"" Fugitive mappings
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gw :Gwrite<CR>
-nnoremap <leader>gd :Gdiff<CR>
-
 "" <leader>/ toggles search highlight
 nnoremap <silent> <leader>/ :set hlsearch!<CR>
-
-" CtrlP
-"" show files relative to the cwd
-let g:ctrlp_working_path_mode=0
-let g:ctrlp_custom_ignore = {
-\   'dir': '\v[\/](\.git|\.hg|\.svn|man|htmlcov|node_modules)$',
-\   'file': '\v\.(exe|so|dll|pyc|o)$',
-\}
-"" don't limit the number of files
-let g:ctrlp_max_files=0
-let g:ctrlp_map = '<leader>p'
-nnoremap <leader>P :CtrlPBuffer<CR>
 
 " Ag
 nnoremap <leader>a :Ag!<SPACE>
@@ -150,10 +109,6 @@ let g:UltiSnipsSnippetDirectories = ['snips']
 "" we need to use CTRL-j in order to avoid conflicts with YCM
 let g:UltiSnipsExpandTrigger = '<c-j>'
 
-" make
-nnoremap <leader>m :make<SPACE>
-nnoremap <leader>M :make<CR>
-
 " Syntastic
 let g:syntastic_python_checkers = ['pylint', 'pep8']
 let g:syntastic_auto_loc_list=0
@@ -165,9 +120,6 @@ let g:syntastic_mode_map = {
 let g:syntastic_python_pep8_args = '--max-line-length=80'
 
 nnoremap <leader>l :SyntasticCheck<CR>
-
-" YouCompleteMe
-let g:ycm_use_ultisnips_completer = 0
 
 " Shell and Thunar
 if has('gui_running')
