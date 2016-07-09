@@ -1,3 +1,6 @@
+" Required by vim-textobj-python
+Bundle 'kana/vim-textobj-user'
+
 Bundle 'bps/vim-textobj-python'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'gmarik/vundle'
