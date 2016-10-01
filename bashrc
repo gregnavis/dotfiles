@@ -8,7 +8,7 @@ function pushcd {
     fi
 }
 
-if [ "$OSTYPE" == "darwin14" -o "$OSTYPE" == "darwin15" ]; then
+if [ "${OSTYPE#darwin}" != "${OSTYPE}" ]; then
     alias ls='ls -G'
 else
     alias ls='ls --color=auto'
