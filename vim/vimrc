@@ -60,7 +60,7 @@ filetype plugin on
 
 " Syntax highlight
 syntax on
-colorscheme plum
+colorscheme smyck
 
 " Mappings
 let mapleader = ","
