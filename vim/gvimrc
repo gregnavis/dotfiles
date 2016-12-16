@@ -10,3 +10,6 @@ endif
 
 " don't hide my pointer
 set nomousehide
+
+" stop annoying me with tooltips!
+set noballooneval
