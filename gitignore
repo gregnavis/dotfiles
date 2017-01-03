@@ -13,7 +13,10 @@
 node_modules
 
 .ruby-version
+.rbenv-vars
 .idea
 coverage
 
 .DS_Store
+
+TAGS
