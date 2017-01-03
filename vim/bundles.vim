@@ -2,6 +2,7 @@
 Bundle 'kana/vim-textobj-user'
 
 Bundle 'bps/vim-textobj-python'
+Bundle 'chriskempson/base16-vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'gmarik/vundle'
 Bundle 'jmcantrell/vim-virtualenv'
