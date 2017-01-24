@@ -60,7 +60,7 @@ filetype plugin on
 
 " Syntax highlight
 syntax on
-colorscheme Tomorrow-Night-Bright
+colorscheme base16-phd
 
 " Mappings
 let mapleader = ","

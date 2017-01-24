@@ -5,7 +5,7 @@ set guioptions=ci
 if has("gui_macvim")
     set guifont=Menlo\ Regular:h14
 else
-    set guifont=Inconsolata\ Medium\ 14
+    set guifont=Inconsolata\ Medium\ 18
 endif
 
 " don't hide my pointer
