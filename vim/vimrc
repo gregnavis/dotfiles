@@ -45,7 +45,7 @@ set directory=$HOME/.vim/swapfiles
 
 " Miscellaneous
 set hidden
-set shortmess=aI
+set shortmess=atI
 set visualbell
 
 " The command window
