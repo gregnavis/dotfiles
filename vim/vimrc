@@ -126,3 +126,5 @@ let g:syntastic_python_pep8_args = '--max-line-length=80'
 
 nnoremap <leader>l :SyntasticCheck<CR>
 
+" Vim-test
+let test#strategy = "vimux"

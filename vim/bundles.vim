@@ -1,10 +1,12 @@
 " Required by vim-textobj-python
 Bundle 'kana/vim-textobj-user'
 
+Bundle 'benmills/vimux'
 Bundle 'bps/vim-textobj-python'
 Bundle 'chriskempson/base16-vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'gmarik/vundle'
+Bundle 'janko-m/vim-test'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'justinmk/vim-sneak'
 Bundle 'kchmck/vim-coffee-script'
