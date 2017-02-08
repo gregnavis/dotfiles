@@ -106,6 +106,13 @@ nnoremap <silent> <leader>/ :set hlsearch!<CR>
 nnoremap <leader>a :Ag!<SPACE>
 nnoremap <leader>w :Ag! -w <C-R><C-W><CR>
 
+" Testing
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>tl :TestLast<CR>
+nnoremap <leader>tn :TestNearest<CR>
+nnoremap <leader>ts :TestSuite<CR>
+nnoremap <leader>tv :TestVisit<CR>
+
 " UltiSnips
 
 "" cannot use snippets because it's reserved for SnipMate snippets
