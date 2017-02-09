@@ -4,7 +4,7 @@
 [color]
     ui = auto
 [core]
-	editor = gvim -f
+	editor = vim
 	excludesfile = ~/.gitignore
 	pager = less -+-RN -n
 [format]
