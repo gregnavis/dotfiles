@@ -35,6 +35,7 @@ set wildmenu
 
 " No more annoyances!
 set nomore
+set backspace=2
 
 " Status line
 "" show the status line with more than one window
