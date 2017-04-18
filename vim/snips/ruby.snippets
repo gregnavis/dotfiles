@@ -1,0 +1,33 @@
+snippet c "a class" b
+class ${1:name}
+  ${2:body}
+end
+endsnippet
+
+snippet m "a module" b
+module ${1:name}
+  ${2:body}
+end
+endsnippet
+
+snippet d "a def" b
+def ${1:name}
+  ${2:body}
+end
+endsnippet
+
+snippet d( "a def with arguments" b
+def ${1:name}(${2:args})
+  ${2:body}
+end
+endsnippet
+
+snippet defi "the initialize method" b
+def initialize(${1})
+`!p
+snip >> 1
+if t[1].strip():
+    for name in t[1].split(','):
+        snip.rv += snip.mkline('@{0} = {0}'.format(name.strip()))`
+end
+endsnippet
