@@ -35,3 +35,11 @@ if t[1].strip():
         snip.rv += snip.mkline('@{0} = {0}'.format(name.strip()))`
 end
 endsnippet
+
+snippet let "an RSpect let" b
+let(:${1}) { ${2} }
+endsnippet
+
+snippet let! "an RSpect let!" b
+let!(:${1}) { ${2} }
+endsnippet
