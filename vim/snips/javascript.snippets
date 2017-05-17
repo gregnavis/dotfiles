@@ -1,33 +1,24 @@
-snippet btc "a Buster.js test case"
-buster.testCase('${1:name}', {
-${2}
-});
+snippet log "console.log"
+console.log('$1');
 endsnippet
 
-snippet bt "a Buster.js test"
-'${1:name}': function () {
-${2}
+snippet log= "console.log('value = %o', value)"
+console.log('${1:expression} = %o', $1);
+endsnippet
+
+snippet class "an ES2015 class"
+class ${1:Name} {
 }
 endsnippet
 
-snippet bas "a Buster.js assert"
-assert.same(${1:actual}, ${2:expected});
+snippet m "an ES2015 method"
+${1:name}($2) {
+  $3
+}
 endsnippet
 
-snippet qt "a QUnit test"
-QUnit.test('${1:name}', function (assert) {
-${2}
-});
-endsnippet
-
-snippet qase "a QUnit assert.strictEqual"
-assert.strictEqual(${1:actual}, ${2:expected});
-endsnippet
-
-snippet qade "a QUnit assert.deepEqual"
-assert.deepEqual(${1:actual}, ${2:expected});
-endsnippet
-
-snippet r "a Node.JS require"
-var ${1:name} = require('$1');
+snippet component "a React component"
+class ${1:Name} extends Component {
+  $2
+}
 endsnippet
