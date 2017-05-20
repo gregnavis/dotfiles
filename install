@@ -44,7 +44,7 @@ else
     cp tint2rc "${INSTALL}/.config/tint2"
 
     echo " * X Window"
-    cp xmodmap "${INSTALL}/.xmodmap"
+    cp xkbmap "${INSTALL}/.xkbmap"
     cp xinitrc "${INSTALL}/.xinitrc"
     cp gtkrc-2.0 "${INSTALL}/.gtkrc-2.0"
     mkdir -p "${INSTALL}/.config/gtk-3.0"

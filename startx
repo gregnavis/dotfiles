@@ -10,7 +10,7 @@ XMODMAP="${HOME}/.xmodmap"
 [ -r "${WALLPAPER}" ] && hsetroot -center "${WALLPAPER}"
 
 # remap keys
-[ -r "${XMODMAP}" ] && xmodmap "${XMODMAP}"
+[ -r "${XKBMAP}" ] && source "${XKBMAP}"
 
 # don't annoy me!
 xset -b

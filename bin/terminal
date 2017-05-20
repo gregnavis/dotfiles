@@ -1,3 +1,6 @@
 #!/bin/bash
 
-(command -v urxvtc >& /dev/null && urxvtc) || (command -v urxvt >& /dev/null && urxvt) || (command -v xterm >& /dev/null && xterm)
+(command -v st >& /dev/null && st -f "Inconsolata:size=14") ||
+    (command -v urxvtc >& /dev/null && urxvtc) ||
+    (command -v urxvt >& /dev/null && urxvt) ||
+    (command -v xterm >& /dev/null && xterm)

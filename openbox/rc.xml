@@ -233,7 +233,7 @@
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-e">
+    <keybind key="W-u">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -241,7 +241,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-r">
+    <keybind key="W-i">
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>0</y>
@@ -249,7 +249,7 @@
         <height>100%</height>
       </action>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="W-j">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -257,7 +257,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-f">
+    <keybind key="W-k">
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>0</y>
@@ -265,7 +265,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-c">
+    <keybind key="W-m">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>50%</y>
@@ -273,7 +273,7 @@
         <height>50%</height>
       </action>
     </keybind>
-    <keybind key="W-v">
+    <keybind key="W-comma">
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>50%</y>
@@ -282,11 +282,8 @@
       </action>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="W-m">
+    <keybind key="W-y">
       <action name="ToggleMaximize"/>
-    </keybind>
-    <keybind key="W-S-m">
-        <action name="ToggleFullscreen"/>
     </keybind>
     <keybind key="W-period">
       <action name="Close"/>
@@ -298,156 +295,31 @@
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-l">
-      <action name="DirectionalCycleWindows">
-        <direction>right</direction>
-        <dialog>no</dialog>
+      <action name="PreviousWindow">
+        <dialog>list</dialog>
         <raise>yes</raise>
-      </action>
-    </keybind>
-    <keybind key="W-h">
-      <action name="DirectionalCycleWindows">
-        <direction>left</direction>
-        <dialog>no</dialog>
-        <raise>yes</raise>
-      </action>
-    </keybind>
-    <keybind key="W-k">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-        <dialog>no</dialog>
-        <raise>yes</raise>
-      </action>
-    </keybind>
-    <keybind key="W-j">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
-        <dialog>no</dialog>
-        <raise>yes</raise>
+        <linear>yes</linear>
+        <interactive>no</interactive>
       </action>
     </keybind>
     <keybind key="W-semicolon">
       <action name="NextWindow">
-        <dialog>none</dialog>
+        <dialog>list</dialog>
         <raise>yes</raise>
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <keybind key="W-S-semicolon">
-      <action name="PreviousWindow">
-        <dialog>none</dialog>
-        <raise>yes</raise>
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
+        <linear>yes</linear>
+        <interactive>no</interactive>
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind name="XF86HomePage">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>x-www-browser</name>
-        </startupnotify>
-      </action>
-    </keybind>
     <keybind key="W-Return">
       <action name="Execute">
         <command>terminal</command>
-      </action>
-    </keybind>
-    <keybind key="W-S-Return">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>GVim</name>
-        </startupnotify>
-        <command>gvim</command>
       </action>
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
         <command>dmenu_run</command>
       </action>
-    </keybind>
-    <keybind key="W-t">
-      <action name="Execute">
-        <command>thunar</command>
-      </action>
-    </keybind>
-    <keybind key="W-b">
-      <action name="Execute">
-        <command>firefox</command>
-      </action>
-    </keybind>
-    <keybind key="W-n">
-      <action name="Execute">
-          <command>gvim ~/Notebook.md</command>
-      </action>
-    </keybind>
-    <keybind key="W-S-d">
-        <action name="Execute">
-            <command>gvim -c ":cd ~/p/dotfiles"</command>
-        </action>
-    </keybind>
-    <!-- Volume control -->
-    <keybind key="XF86AudioMute">
-      <action name="Execute">
-        <command>amixer -q set Master toggle</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>amixer -q set Master 5%-</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>amixer -q set Master 5%+</command>
-      </action>
-    </keybind>
-    <keybind key="A-XF86AudioMute">
-      <action name="Execute">
-        <command>amixer -q set 'Capture' toggle</command>
-      </action>
-    </keybind>
-    <keybind key="A-XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>amixer -q set 'Capture' 5%-</command>
-      </action>
-    </keybind>
-    <keybind key="A-XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>amixer -q set 'Front Mic 5%+</command>
-      </action>
-    </keybind>
-    <!-- Brightness control -->
-    <keybind key="XF86MonBrightnessUp">
-      <action name="Execute">
-          <command>xbacklight -inc 10</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessDown">
-      <action name="Execute">
-          <command>xbacklight -dec 10</command>
-      </action>
-    </keybind>
-    <!-- Personal analytics -->
-    <keybind key="W-a">
-      <keybind key="m">
-        <keybind key="1"><action name="Execute"><command>record-variable mood bad</command></action></keybind>
-        <keybind key="2"><action name="Execute"><command>record-variable mood netural</command></action></keybind>
-        <keybind key="3"><action name="Execute"><command>record-variable mood good</command></action></keybind>
-      </keybind>
-      <keybind key="d">
-        <keybind key="i"><action name="Execute"><command>record-event internal-distraction</command></action></keybind>
-        <keybind key="e"><action name="Execute"><command>record-event external-distraction</command></action></keybind>
-      </keybind>
     </keybind>
   </keyboard>
   <mouse>
