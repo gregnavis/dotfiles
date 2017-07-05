@@ -303,6 +303,14 @@
       </action>
     </keybind>
     <keybind key="W-semicolon">
+      <action name="PreviousWindow">
+        <dialog>list</dialog>
+        <raise>yes</raise>
+        <linear>yes</linear>
+        <interactive>no</interactive>
+      </action>
+    </keybind>
+    <keybind key="W-apostrophe">
       <action name="NextWindow">
         <dialog>list</dialog>
         <raise>yes</raise>
@@ -319,6 +327,11 @@
     <keybind key="W-p">
       <action name="Execute">
         <command>dmenu_run</command>
+      </action>
+    </keybind>
+    <keybind key="W-h">
+      <action name="Execute">
+        <command>chromium</command>
       </action>
     </keybind>
   </keyboard>
