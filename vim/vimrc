@@ -103,10 +103,10 @@ nnoremap <C-n> :call New()<CR>
 "" <leader>/ toggles search highlight
 nnoremap <silent> <leader>/ :set hlsearch!<CR>
 
-" Ag
-nnoremap <leader>a :Ag!<SPACE>
-nnoremap <leader>w :Ag! -w <C-R><C-W><CR>
-nnoremap <leader>W :Ag! -ws <C-R><C-W><CR>
+" Rg
+nnoremap <leader>a :Rg<SPACE>
+nnoremap <leader>w :Rg -w <C-R><C-W><CR>
+nnoremap <leader>W :Rg -ws <C-R><C-W><CR>
 
 " Testing
 nnoremap <leader>tf :TestFile<CR>
