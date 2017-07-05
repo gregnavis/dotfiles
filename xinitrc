@@ -1,4 +1,35 @@
 #!/bin/bash
 
+WALLPAPER="${HOME}/.wallpaper"
+XMODMAP="${HOME}/.xmodmap"
+
+# set environment variables
+[ -r "${HOME}/.env" ] && source ${HOME}/.env
+
+# set the background
+[ -r "${WALLPAPER}" ] && hsetroot -center "${WALLPAPER}"
+
+# remap keys
+[ -r "${XKBMAP}" ] && source "${XKBMAP}"
+
+# don't annoy me!
+xset -b
+
+# install Xresources
+[ -r "${HOME}/.Xresources" ] && xrdb -merge "${HOME}/.Xresources"
+
+# run programs
+
+optrun() {
+    command "$1" >& /dev/null && $@ &
+}
+
+optrun dropbox start
+optrun redshift -r -l 53:14
+optrun synergy
+optrun pasystray
+optrun urxvtd
+optrun tint2
+
 setxkbmap -option caps:super
 exec ssh-agent openbox-session
