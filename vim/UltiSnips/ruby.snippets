@@ -74,3 +74,15 @@ after(${1::each}) do
   $0
 end
 endsnippet
+
+snippet puts=
+puts("${1:expression} = #{$1}")
+endsnippet
+
+snippet log
+Rails.logger.${1:info}
+endsnippet
+
+snippet log=
+Rails.logger.${1:info}("${2:expression} = #{$2}")
+endsnippet
