@@ -1,53 +1,76 @@
-snippet c "a class" b
-class ${1}
-  ${2}
+snippet class
+class ${1:ClassName}${2: < ${3:BaseClass}}
+  $0
 end
 endsnippet
 
-snippet m "a module" b
-module ${1}
-  ${2}
+snippet module
+module ${1:ModuleName}
+  $0
 end
 endsnippet
 
-snippet d "a def" b
-def ${1}${2}
-  ${3}
+snippet init
+def initialize${1:(${2:args})}
 end
 endsnippet
 
-snippet memo "a memoization method" b
+snippet @=
+@${1:name} = ${2:value}
+endsnippet
+
+snippet def
+def ${1:name}${2:(${3:args})}
+  $0
+end
+endsnippet
+
+snippet memo
 def ${1:name}
-  @$1 = ${2:value}
+  @$1 ||= ${2:value}
 end
 endsnippet
 
-snippet pry "a Pry breakpoint" b
+snippet pry
 binding.pry
 endsnippet
 
-snippet defi "the initialize method" b
-def initialize(${1})
-`!p
-snip >> 1
-if t[1].strip():
-    for name in t[1].split(','):
-        snip.rv += snip.mkline('@{0} = {0}'.format(name.strip()))`
-end
-endsnippet
-
-snippet let "an RSpect let" b
+snippet let
 let(:${1}) { ${2} }
 endsnippet
 
-snippet let! "an RSpect let!" b
+snippet let!
 let!(:${1}) { ${2} }
 endsnippet
 
-snippet eto "expect(...).to ..." b
-expect($1).to $2
+snippet desc
+describe '${1}' do
+  ${0}
+end
 endsnippet
 
-snippet enot "expect(...).not_to ..." b
-expect($1).not_to $2
+snippet it
+it '${1}' do
+  ${0}
+end
+endsnippet
+
+snippet expect
+expect(${1:value}).to ${2:expectation}
+endsnippet
+
+snippet expectnot
+expect(${1:value}).not_to ${2:expectation}
+endsnippet
+
+snippet before
+before(${1::each}) do
+  $0
+end
+endsnippet
+
+snippet after
+after(${1::each}) do
+  $0
+end
 endsnippet
