@@ -8,6 +8,7 @@ endsnippet
 
 snippet class "an ES2015 class"
 class ${1:Name} {
+  $0
 }
 endsnippet
 
@@ -21,4 +22,34 @@ snippet component "a React component"
 class ${1:Name} extends Component {
   $2
 }
+endsnippet
+
+snippet it "a Jest it function"
+it('${1:description}', () => {
+  $0
+});
+endsnippet
+
+snippet if "an if statement"
+if(${1:condition}) {
+  $0
+}
+endsnippet
+
+snippet ifelse "an if/else statement"
+if(${1:condition}) {
+  ${2:consequent}
+} else {
+  ${3:alternative}
+}
+endsnippet
+
+snippet get "an ES2015 reader"
+get ${1:name}() {
+  $0
+}
+endsnippet
+
+snippet bindthis "bind(this) for React components"
+this.${1:method} = this.$1.bind(this);
 endsnippet
