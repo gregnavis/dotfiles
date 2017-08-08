@@ -25,6 +25,12 @@ def ${1:name}${2:(${3:args})}
 end
 endsnippet
 
+snippet defni
+def ${1:name}${2:(${3:args})}
+  fail(NotImplementedError.new)
+end
+endsnippet
+
 snippet memo
 def ${1:name}
   @$1 ||= ${2:value}
