@@ -28,7 +28,8 @@ set nowrapscan
 
 " Viewing
 set nowrap
-set nonumber
+set relativenumber
+set number
 
 " Wild menu
 set wildmenu
