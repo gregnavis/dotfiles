@@ -6,7 +6,7 @@ snippet log= "console.log('value = %o', value)"
 console.log('${1:expression} = %o', $1);
 endsnippet
 
-snippet class "an ES2015 class"
+snippet c
 class ${1:Name} {
   $0
 }
@@ -14,14 +14,26 @@ endsnippet
 
 snippet m "an ES2015 method"
 ${1:name}($2) {
-  $3
+  $0
+}
+endsnippet
+
+snippet m0 "an ES2015 method without arguments"
+${1:name}() {
+  $0
 }
 endsnippet
 
 snippet component "a React component"
 class ${1:Name} extends Component {
-  $2
+  $0
 }
+endsnippet
+
+snippet describe "a Jest describe function"
+describe('${1:description}', () => {
+  $0
+});
 endsnippet
 
 snippet it "a Jest it function"
@@ -52,4 +64,20 @@ endsnippet
 
 snippet bindthis "bind(this) for React components"
 this.${1:method} = this.$1.bind(this);
+endsnippet
+
+snippet forin
+for(${1:var} ${2:name} in ${3:collection}) {
+  $0
+}
+endsnippet
+
+snippet forinown
+for(${1:var} ${2:name} in ${3:collection}) {
+  if(!$3.hasOwnProperty($2)) {
+    continue;
+  }
+
+  $0
+}
 endsnippet

@@ -92,3 +92,21 @@ endsnippet
 snippet log=
 Rails.logger.${1:info}("${2:expression} = #{$2}")
 endsnippet
+
+snippet t
+test '${1:description}' do
+  ${0}
+end
+endsnippet
+
+snippet ares
+assert_response(:${1:success})
+endsnippet
+
+snippet asel
+assert_select('${1:selector}')
+endsnippet
+
+snippet aeq
+assert_equal(${1:expected}, ${2:actual})
+endsnippet
