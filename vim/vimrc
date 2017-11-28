@@ -67,7 +67,7 @@ set termguicolors
 
 " Syntax highlight
 syntax on
-colorscheme base16-solarized-light
+colorscheme base16-monokai
 
 " Mappings
 let mapleader = ","
