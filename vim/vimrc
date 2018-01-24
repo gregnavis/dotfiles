@@ -134,5 +134,10 @@ let g:syntastic_python_pep8_args = '--max-line-length=80'
 
 nnoremap <leader>l :SyntasticCheck<CR>
 
+" fzf
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>c :Colors<CR>
+
 " Vim-test
 let test#strategy = "vimux"
