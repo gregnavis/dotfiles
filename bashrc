@@ -61,9 +61,6 @@ alias gresh='git reset --hard'
 alias gs='git status -sb'
 alias gsh='git show'
 
-alias .update='sudo yum update'
-alias .install='sudo yum install'
-
 function __prompt_command() {
     local exit_code=`printf '%+3s' $?`
 
