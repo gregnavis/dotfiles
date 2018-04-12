@@ -131,6 +131,11 @@ HISTSIZE=5000
 source "$HOME/.bash/fabric-completion.bash"
 command -v pip >& /dev/null && eval "$(pip completion --bash)"
 
+# configure fzf + ripgrep
+if command -v fzf >& /dev/null && command -v rg >& /dev/null; then
+    export FZF_DEFAULT_COMMAND="rg --files"
+fi
+
 # initialize rbenv (if installed)
 if [ -d "$HOME/.rbenv" ]; then
     PATH="$HOME/.rbenv/bin:$PATH"
