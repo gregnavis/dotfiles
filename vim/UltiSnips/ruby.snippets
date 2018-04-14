@@ -69,6 +69,14 @@ snippet expn
 expect(${1:value}).not_to ${2:expectation}
 endsnippet
 
+snippet exp{
+expect { ${1:statement} }.to ${2:expectation}
+endsnippet
+
+snippet exp{n
+expect { ${1:statement} }.not_to ${2:expectation}
+endsnippet
+
 snippet b
 before(${1::each}) do
   $0
