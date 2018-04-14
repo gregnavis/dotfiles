@@ -41,15 +41,15 @@ snippet pry
 binding.pry
 endsnippet
 
-snippet let
+snippet l
 let(:${1}) { ${2} }
 endsnippet
 
-snippet let!
+snippet l!
 let!(:${1}) { ${2} }
 endsnippet
 
-snippet desc
+snippet dsc
 describe '${1}' do
   ${0}
 end
@@ -61,21 +61,21 @@ it '${1}' do
 end
 endsnippet
 
-snippet expect
+snippet exp
 expect(${1:value}).to ${2:expectation}
 endsnippet
 
-snippet expectnot
+snippet expn
 expect(${1:value}).not_to ${2:expectation}
 endsnippet
 
-snippet before
+snippet b
 before(${1::each}) do
   $0
 end
 endsnippet
 
-snippet after
+snippet a
 after(${1::each}) do
   $0
 end
